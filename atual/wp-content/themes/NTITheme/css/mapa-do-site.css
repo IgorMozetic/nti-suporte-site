@@ -1,0 +1,49 @@
+/***** Colors & Sizes *****/
+
+/* .card.card-cascade.narrower .view.view-cascade {
+  
+  margin-top: -1.25rem;
+  margin-right: 4%;
+  margin-left: 4%;
+} */
+.view-title{
+  
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  padding-right: 5px;
+  
+
+}
+
+
+.card.card-cascade .view.view-cascade.gradient-card-header {
+  padding: 1.6rem 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.card.card-cascade .view.view-cascade {
+  /* border-radius: .25rem; */
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+.view {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+/* .info-color {
+  color: #02672d;
+  background-color: #f8f9fa;
+  border-color: #ffd200;
+} */
+
+.divided-list li {
+ 
+  padding-bottom: 10px;
+  /* padding-top: 10px; */
+  /* border-bottom: 1px solid #eee; */
+  font-size: 1rem;
+}

@@ -1,0 +1,243 @@
+PARTE RETIRADA DA PAGINA
+	<div class="container-fluid">
+		<div class="row mx-auto">
+			<div class="col-sm-12 col-md-4 col-lg-3 col-xl-2">
+				<div class="title-divider">
+					<h3><i class="fa fa-video-camera" aria-hidden="true"></i></i>
+						Webconferência</h3>
+
+				</div>
+				<div class="card card-serv rounded text-center">
+					<div class="text-center">
+						<a class="" href="<?php $url = esc_url(home_url('/?ntiservice=web-conferencia'));
+													echo $url; ?>"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+					</div>
+					<!-- <a class="link-card-serv" href="https://central.ufabc.edu.br/index.php/default/areaDesc/3">
+						<h4 class="pr-3 pb-0">WebConferência</h4>
+					</a> -->
+				</div>
+
+			</div>
+				
+			<div class="col-sm-12  col-md-8 col-lg-9 col-xl-10">
+				<div class="row">
+					<div class="col-12">
+						<div class="title-divider">
+							<h3><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+								Sistemas</h3>
+
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<p></p>
+								<p></p>
+							</div>
+						</div>
+						<div id="carouselExampleControls" class="carousel slide carousel-overwrite" data-ride="carousel" data-interval="false">
+							<div class="carousel-inner row h-100 ">
+								<div class="carousel-item card col-12 col-md-3 col-md-3 active">
+									<div class="card card-default">
+
+										<a href="https://acesso.ufabc.edu.br/site/login" title="Sistema Acesso">
+											<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/images/acesso.png" alt="slide 1">
+										</a>
+
+									</div>
+								</div>
+								<div class="carousel-item card col-12 col-md-3">
+									<div class="card card-default">
+										<div class="row mx-auto">
+
+											<a class="mx-auto" href="https://webmail.ufabc.edu.br/" title="Sistema Webmail">
+												<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/images/roundcube-logo-square.jpg" alt="slide 2">
+											</a>
+
+											<a class="mx-auto" href="https://webmail.ufabc.edu.br/">
+												<p></p>
+												<h4 class="p-2 text-center">Webmail</h4>
+											</a>
+
+										</div>
+
+
+									</div>
+								</div>
+								<div class="carousel-item card  col-12 col-md-3 h-100 ">
+									<div class="card card-default">
+
+										<a href="https://www.google.com.br/" title="Sistema Gsuite">
+											<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/images/gsuite.jpg" alt="slide 3">
+										</a>
+
+									</div>
+								</div>
+								<div class="carousel-item card col-12 col-md-3">
+									<div class="card card-default">
+
+										<a href="https://moodle.ufabc.edu.br/" title="Sistema Moodle">
+											<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/images/moodle.svg" alt="slide 4">
+										</a>
+
+									</div>
+								</div>
+								<div class="carousel-item card col-12 col-md-3 ">
+									<div class="card card-default">
+
+										<a href="https://biblioteca.ufabc.edu.br/" title="Sistema Biblioteca">
+											<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/images/logo_biblioteca.png" alt="slide 5">
+										</a>
+
+									</div>
+								</div>
+
+								<div class="carousel-item card col-12 col-md-3 ">
+									<div class="card card-default">
+
+										<a href="https://nti.ufabc.edu.br/sistemas/" title="Clique para ver todos os sitemas">
+											<h3 class="text-center">Todos <br>Sistemas <i class="fa fa-chevron-right" aria-hidden="true"></i></h3>
+										</a>
+
+									</div>
+								</div>
+
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next text-faded" href="#carouselExampleControls" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<p></p>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class=col-md-8>
+				<div class="row">
+					<div class="col-12">
+						<div class="title-divider">
+							<h3><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+								Notícias</h3>
+
+						</div>
+					</div>
+				</div>
+				<div class="p-2">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="wrapper">
+								<div class="container">
+									<div class="row">
+										<?php
+										if (have_posts()) {
+											while (have_posts()) {
+												the_post();
+												$the_post_id = get_the_id();
+												$article_terms = wp_get_post_terms($the_post_id, ['category']);
+												if (empty($article_terms) || !is_array($article_terms)) {
+
+													return 1;
+												}
+										?>
+												<div class="col-md-6 col-lg-4 posts">
+													<div class="card mb-4 mx-30">
+
+														<?php if (has_post_thumbnail()) ?>
+														
+															
+
+															<?php echo '<a href=' . get_permalink() . '>'?>
+															<div class="img-posts">
+																<?php the_post_thumbnail(); ?>
+																</div>
+															</a>
+
+														
+														
+														<!-- <img src="https://i.postimg.cc/WzjcC7Hb/1.jpg" class="card-img-top" alt="..."> -->
+														<div class="card-body rounded">
+															<div class="card-title">
+																<?php echo '<a href=' . get_permalink() . '>'    . get_the_title() . '</a>' ?>
+															</div>
+															<?php
+															foreach ($article_terms as $article_term) {
+																// Get the ID of a given category
+
+																$category_id = get_cat_ID($article_term->name);
+																// Get the URL of this category
+
+																$category_link = get_category_link($category_id);
+															?>
+																<!-- <p class="card-text badge bg-warning bg-opacity-75 text-wrap"><a href=<?php echo $category_link ?>;><?php echo esc_html($article_term->name); ?></a></p> -->
+															<?php }; ?>
+															<!-- <p class="card-text">
+																<?php the_excerpt() ?></p> -->
+															<div class="socials">
+																<?php
+																$url = urlencode(get_the_permalink()); ?>
+																<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" data-action="share/whatsapp/share"><i class="fa fa-facebook"></i></a>
+																<!-- <a href="#"><i class="fa fa-youtube"></i></a> -->
+																<!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+																<!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+																<a href="https://api.whatsapp.com/send?text=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-whatsapp"></i></a>
+															</div>
+															
+															<!-- <div class=btn-card>
+																<a style="margin-top:10px" href="<?php the_permalink() ?>" class="btn btn-theme">Leia mais</a>
+																</div> -->
+														</div>
+
+													</div>
+
+												</div>
+
+
+											<?php }; // end while
+											?>
+
+										<?php } // end if
+										?>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--fim de noticiais-->
+			<!--início destaque-->
+			<div class="col-md-4">
+
+				<?php get_sidebar('destaque'); ?>
+
+
+			</div>
+
+
+
+		</div>
+											
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p></p>
+		</div>
+	</div>
+	</div>

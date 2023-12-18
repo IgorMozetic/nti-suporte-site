@@ -1,0 +1,682 @@
+/*
+Theme Name: NtiTheme Teste
+Theme URI: 
+Description: Mytheme Built on bootstrap
+Version:1.1
+Author: NTI
+Author URI:  
+*/
+
+
+/*color*/
+.title-header h1 {
+    /*color: #fff; */
+    color: #ffd200;
+}
+.title-header  h2{
+    color: white;
+}
+.b-header{
+    background: linear-gradient(to bottom,#006d35 0,#0a5517 100%);
+    border-bottom: 1px solid #006d35;
+   
+}
+header #accessibility a, header #portal-siteactions a, header #language a {
+    color: #abebb8;
+}
+
+header #accessibility a span {
+    background-color: #dcffe3;
+    color: #006d35;
+   
+}
+header #social-icons a {
+    color: #abebb8;
+}
+
+.searchform button svg{
+    color: #02672d;
+}
+/* barra brasil--------------------------------------------------------------------- */
+#wrapper-barra-brasil {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+}
+#barra-brasil{
+    height: 32px;
+    background: #f1f1f1;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 32px;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    border-bottom: 1px solid #dfdfdf;
+    box-sizing: content-box;
+}
+#barra-brasil ul{
+    list-style:none;
+}
+#barra-brasil li{
+    display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED
+}
+
+/* acessibilidade ------------------------------------------------------------------ */
+header #accessibility {
+    font-family: Arial, Helvetica, sans-serif!important;
+    margin: 2px 0 0 0;
+}
+
+header #accessibility li {
+    margin-right: 10px;
+}
+header #accessibility a, header #portal-siteactions a, header #language a {
+    font-size: .6em;
+}
+header #accessibility a span {
+    padding: 0 3px;
+}
+
+header #social-icons a {
+    display: block;
+    height: 24px;
+    text-decoration: none;
+}
+/* header #social-icons a i {
+    font-size: 0.5em;
+} */
+
+header #social-icons span {
+    display: none!important;
+}
+/* cabeçalho com logo ufabc e busca ------------------------------------------------ */
+
+.logo1{
+    width: 6em;
+    padding-left: 10px
+}
+.logo2{
+    width: 60%;
+    height: 60%;
+    padding-left: 10px;
+}
+
+
+.h-container{
+        padding-bottom: 8px;
+    }
+    
+.title-header h1 {
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-align: left;
+   
+}
+.title-header  h2{ 
+    font-size: 1.1em;
+    /*font-weight: 800;*/
+    text-transform: none;
+    line-height: 1.2em;
+    text-align: center;
+}
+.itens-header {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.search-col  { 
+    border-radius: 0.25em;
+    
+    
+ }
+
+.search-col form div{ 
+     
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display:inline;
+
+ }
+ .search-col form { 
+    float: left;
+    
+ }
+ .search_field {
+    border-top-left-radius: .25rem!important;
+    border-bottom-left-radius: .25rem!important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.searchform button{
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-top-right-radius: .25rem!important;
+    border-bottom-right-radius: .25rem!important;
+}
+
+
+
+
+/* Menu ---------------------------------------------------------------------------- */
+/*  sobrescrevendo a classe menu do wodpress  */
+.menu-header{
+    background:#00420b;
+   
+}
+.menu {
+    margin: 0px;
+    padding: 0px;
+   
+    width: 100%;
+    height: auto;
+	display: flex;
+    background:#00420b;
+    
+    
+}
+/* #menu-menu-nti{
+    
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none; 
+} */
+
+
+/* .menu li{
+    list-style: none;  
+} */
+
+/* .menu > li{
+    display: inline;
+    margin-left: 1.618em;
+   
+} */
+
+
+
+.menu > li{
+    display: inline;
+    margin-left: 0;
+    text-transform: uppercase;
+}
+
+.menu a {
+    color: rgba(255,255,255,.5);
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    /* background-color: transparent; */
+}
+
+
+.menu li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 	0.75em;
+    letter-spacing:	1px;
+  
+}
+
+
+
+.menu a:hover {
+    color: #fff;
+
+
+  
+   
+}
+.menu h5{
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* 
+.primary-menu ul {
+    background: #000;
+    border-radius: 0.4rem;
+    color: green;
+    font-size: 1.7rem;
+    opacity: 0;
+    padding: 1rem 0;
+    position: absolute;
+    right: 9999rem;
+    top: calc(100% + 2rem);
+    transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+    transform: translateY(0.6rem);
+    width: 20rem;
+    z-index: 1;
+}
+.primary-menu ul::before, .primary-menu ul::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+}
+ */
+/* .sub-menu {
+    display: flex;
+    color :rgb(156, 82, 82);
+} */
+
+/* .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+   
+ } */
+/* 
+ .sub-menu li:hover a{
+   
+    border-bottom: 2px solid #ffd200;
+    background: white;
+    color: #02672d;
+    border-radius: 5% 5% 5% 5%;
+    
+}   */
+
+.menu ul{
+    
+    display: none;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    list-style: none;
+    text-transform:capitalize;
+    
+
+}
+
+.menu li:hover >.sub-menu{
+    display: inline;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    z-index: +4;
+    background: #00420b;
+    
+
+} 
+
+.menu li:hover >.sub-menu li{
+    
+    width: auto;
+    height: auto;
+    z-index: +4;
+} 
+
+.menu li .sub-menu li a{
+    width: 100%;
+    display: inline;
+    z-index: +4;
+    color: rgba(255,255,255,.5);
+    margin-top: 18px;
+
+} 
+.menu li .sub-menu li a:hover{
+    display: inline;
+    width: 100%;
+    height: auto;
+    z-index: +4;
+    /* color: #ffd200; */
+    color:#e6bd00
+
+    
+
+} 
+
+/*menu header*/
+
+/* #menu-menu-nti{
+    margin: 0;
+    padding: 0;
+    margin-bottom: .5rem;
+	display: flex;
+    font-size: 18px !important;
+    font-weight: bold;
+} */
+
+
+/* #menu-menu-nti> li{
+    display: inline;
+    margin-left: 1.618em;
+} */
+
+/* #menu-menu-nti li a{
+    text-decoration: none;
+    font-size: 	1em;
+    font-family:	'Lato',Helvetica,Arial,sans-serif ;
+    letter-spacing:	1px;
+} */
+
+
+
+/* 
+#menu-menu-nti li.parent::after{
+    content:'';
+} */
+
+.menu .sub-menu {
+  
+   display: none;
+   position: absolute;
+   width: auto;
+   z-index: +4;
+   border-radius: 5px;
+
+}
+
+
+/*dropdown menu */
+/* .menu {
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+/* .menu li{
+    list-style: none;
+} */
+/* .menu li a{
+    text-decoration: none;
+    font-size:  1em;
+    letter-spacing: 1px;
+} */
+
+
+/* .menu .sub-menu {
+   display: none;
+   position: absolute;
+   background-color: #fffbe6;
+} */
+/* 
+.menu li:hover>.sub-menu{
+    display: inline;
+    width: auto;
+    height: auto;
+    border: solid 1px #fffbe6
+    ;
+    z-index: +4;
+} */
+
+/* .menu {
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: auto !important;
+    display: flex;
+    list-style: none;
+} */
+
+/* .menu > li{
+    display: inline;
+    margin-left: 0;
+} */
+/* .menu li{
+    list-style: none;
+} */
+/* .menu li a{
+    text-decoration: none;
+    font-size:  1em;
+    
+    letter-spacing: 1px;
+} */
+/* .menu li.parent::after{
+    content:'';
+} */
+
+/* .menu .sub-menu {
+   display: none;
+   position: absolute;
+   background-color: #ffffff;
+   color:green;
+
+} */
+
+/* .menu li:hover>.sub-menu{
+    display: inline;
+    width: auto;
+    height: auto;
+    border: solid 1px #02672d;
+    z-index: +4;
+
+    
+} */
+
+nav div.collapse.show ul ul {
+    flex-direction: column ;
+    margin-right: auto;
+    
+    }
+
+ .navbar{
+    
+    padding: 0px!important;
+ }
+.navbar-brand{
+    /*margin-left: 3rem;
+   
+}
+/* para alterar css do BetterDocs dentro do widget areatutoriais da home */
+
+.docs-cat-title-inner {
+    border-color: #28a745 !important;
+    border-bottom: 0px solid #ffffff !important;
+    
+  }  
+.docs-cat-link-btn {
+    background-color: #28a745 !important;
+    font-size: 16px;
+    color: #ffffff!important;
+    border-color: #28a745!important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.docs-cat-link-btn:visited {
+    background-color: #28a745 !important;
+    font-size: 16px;
+    color: #ffffff!important;
+    border-color: #28a745!important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.docs-cat-link-btn:hover {
+    background-color: #ffffff !important;
+    font-size: 16px;
+    color: #02672d !important;
+    border-color: #ffd200!important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+} 
+
+/* botao de todo o site ----------------------------------------------------------------- */
+.btn-theme{
+    background-color: #28a745;
+    font-size: 16px;
+    color: #ffffff;
+    border-color: #28a745!important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+
+.btn-theme:hover{
+    color: #28a745!important;
+    background-color: #f8f9fa!important;
+    border-color: #ffd200!important;
+}
+.btn-card{
+    text-align: center;
+}
+
+/* media ; imagens responsivas -----------------------------------------------*/
+svg,
+img,
+embed,
+object {
+	display: block;
+	height: auto;
+	max-width: 100%;
+    object-fit: cover;
+}
+
+
+/*responsivo*/
+@media screen and (max-width: 480px){
+   
+	.itens-header {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #accessibility{
+        display:none;
+    }
+
+    .search-col form div{ 
+        display: inline;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        width: 100%;
+     }
+     .search-col form { 
+        float: none;
+     }
+    
+     .link_slide{
+        font-size: 14px;
+    
+    }
+    .carousel-caption{
+        right: 5%;
+        left: 5%;
+    }
+   
+}
+
+
+.h-nav{
+    /* background: linear-gradient(#02672d, #012912 );*/
+    background:#00420b;
+    border-color: #02692f;
+}
+
+
+
+
+.w-menu{
+    
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/* 
+.breadcrumb {
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+}
+.breadcrumb a {
+    font-size: 16px;
+    color: #566e8b;
+	
+	text-decoration: none;
+} */
+
+#footer-brasil {
+    background: none repeat scroll 0% 0% #00420c;
+    padding: 1em 0px;
+    max-width: 100%;
+ }
+
+@media screen and (max-width:768px){
+    #carouselExampleCaptions {
+        visibility: hidden;
+        height: 0px;
+    }
+   
+    header #accessibility li a  {
+        visibility: hidden;
+        height: 0px;
+        padding-bottom: 0px;
+    }
+    header #accessibility.list-group.list-group-horizontal{
+        visibility: hidden;
+        height: 0px;
+        padding-bottom: 0px;
+    }
+    .title-header h1, h2{
+        visibility: hidden;
+        height: 0px;
+        padding-bottom: 0px;
+    }  
+}
+@media (min-width: 768.01px) and (max-width: 909px) { 
+    header #accessibility.list-group.list-group-horizontal{
+        visibility: hidden;
+        height: 0px;
+        padding-bottom: 0px;
+    }
+    header #accessibility li a  {
+        visibility: hidden;
+        height: 0px;
+        padding-bottom: 0px;
+    }
+    .title-header h1{
+       font-size:calc(8em/ 6)!important;
+    }  
+    .title-header h2{
+        font-size:calc(6em/ 6)!important;
+     }
+   
+
+ }
+@media (min-width: 909.01px) and (max-width: 1015px) { 
+   
+    .title-header h1{
+       font-size:calc(8em/ 5)!important;
+    }  
+    .title-header h2{
+        font-size:calc(6em/ 5)!important;
+     }
+   
+
+ }

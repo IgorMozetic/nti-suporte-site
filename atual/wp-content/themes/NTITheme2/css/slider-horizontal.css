@@ -1,0 +1,95 @@
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-overwrite .carousel-inner .active,
+    .carousel-overwrite .carousel-inner .active + .carousel-item,
+    .carousel-overwrite .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-overwrite .carousel-ncolumns .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-overwrite .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-overwrite .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-overwrite .carousel-inner .carousel-item-next,
+    .carousel-overwrite .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-overwrite .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .carousel-overwrite .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-overwrite .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-overwrite .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+       
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-overwrite .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+        
+    }
+
+    /* right or prev direction */
+    .carousel-overwrite .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-overwrite .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-overwrite .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-overwrite .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(50%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+        
+        
+    }
+    /* carousel que apresenta os Sistemas do NTI ------------------------------------*/
+  .carousel-overwrite .carousel-item {
+  
+    margin-right: 0px!important;
+   
+    }
+    .carousel-overwrite img {
+   
+    max-height: 5em;
+    
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carousel-overwrite img {
+   
+        max-height: 4em;
+        
+        }
+
+
+}
+
+

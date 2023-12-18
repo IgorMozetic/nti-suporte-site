@@ -1,0 +1,11 @@
+/* import the necessary Bootstrap files */
+// @import "../scss/_variables";
+
+// Your variable overrides
+$body-bg: #000;
+$primary: rgb(177, 36, 36);
+$secondary: rgb(121, 77, 77);
+footer{background-color: blue};
+
+// Bootstrap and its default variables
+@import "../css/bootstrap.min.css"; 

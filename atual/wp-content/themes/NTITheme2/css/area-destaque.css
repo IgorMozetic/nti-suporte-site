@@ -1,0 +1,23 @@
+.img-dest{
+    display: flex;
+    height: 250px;
+    }
+
+.destaque .card-title a {
+        font-size: 14px;
+        text-transform: uppercase;
+        
+        }
+     
+.destaque .card-title {
+         text-align: center;
+         font-size: 1.1em;
+         line-height: 1.25em;
+         font-weight: 600;
+         }
+     
+.destaque .card-title a{
+           color: #566e8b;
+             
+          }
+     

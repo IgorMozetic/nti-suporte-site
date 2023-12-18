@@ -1,0 +1,215 @@
+
+.wrapper {
+   padding-top: 0px;
+   }
+/* cabecalho Principal que divide os cards  ... -----------------------------------------------*/
+   .title-divider{
+      text-transform: uppercase;
+      border-top: 2px solid #10a055;
+      background: #eeeff2;
+      padding: 10px;
+      margin-bottom: 10px;
+        
+      
+   
+  }
+  .title-divider h3{
+      
+      font-size: 1em;
+      padding-bottom: 0px;
+   
+      }
+ .title-divider .bg-warning{
+   color:green;
+       
+  }
+  
+.title-divider  .fa-warn{
+   font-size: 1.3em;
+   padding: 2px;
+   /* background-color: green; */
+   color: green;
+   border-radius: 50%;
+        
+       
+ }
+ .acessados-divider{
+   border-top: 2px solid #10a055 !important;
+   color: #10a055;
+   
+}
+
+ 
+ .faq-divider{
+   border-top: 2px solid #F78600 !important;
+   color: #F78600;
+   
+}
+
+.av-divider{
+   border-top: 2px solid #E94C4C !important;
+   color: #E94C4C;
+   
+}
+.proc-divider{
+   border-top: 2px solid #0068C9 !important;
+   color: #0068C9;
+
+}
+
+.sist-divider{
+   border-top: 2px solid #7C34A4 !important;
+   color: #7C34A4;
+
+}
+*/
+ /* .serv-divider{
+   border-top: 1px solid #10a055;
+ }
+
+.t-divider{
+   border-top: 1px solid #0068C9 !important;
+   
+}
+
+.ev-divider{
+   border-top: 1px solid #D3B061 !important;
+   
+}
+.proc-divider{
+   border-top: 1px solid #7C34A4 !important;
+   
+} */
+     
+/* card area de servicos  ... -----------------------------------------------*/
+.card-serv{
+   position: relative;
+   /* background-color: #59AA55;
+   color: #fff; */
+
+   border: 1px solid  #59AA55!important;
+   color: #59AA55;
+   background-color: #fff;
+
+}
+
+.card-serv div{
+padding-right: 1em;
+
+}
+
+.card-serv div i {
+      font-size: 6em;
+      margin: 0.2em 0.2em 0.2em 0.3em;
+      color: #59AA55!important;
+
+      /* color: #fff; */
+     
+  }
+  .link-card-list, .posts .card-title a {
+   color: #6c757d!important;
+   
+}
+/* card em formato de lista ---------------------------------------------------------------*/
+
+.link-card-serv {
+   color: #59AA55!important;
+   /* color: #fff!important; */
+}
+.card {
+   border: 0px 
+} 
+
+.border-card-title {
+    border-top: 2px solid  #02672d !important;
+}
+
+ /* area noticiais --------------------------------------------------------------*/
+.posts .card-body{
+/* text-align: center; */
+box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5);
+}
+
+.posts .card-title a {
+   font-size: 14px;
+   text-transform: uppercase;
+   }
+
+.posts .card-title {
+   
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.25em;
+    font-weight: 600;
+    }
+
+
+.posts .img-posts{
+    display: flex; 
+    height: 200px;
+    border-radius: 10px;
+}
+
+.posts .img-posts img{
+    border-radius: 5px 5px 0px 0px;
+}
+
+   /* socials share--------------------------------------------------------------*/
+.socials{
+    text-align: center;
+    }
+
+.socials a {
+   width: 24px;
+   height: 24px;
+   
+   display: inline-block;
+   border-radius: 50%;
+   margin: 0 0px;
+   color:#006d35;
+   }
+.socials a i {
+   color: #006d35;
+   padding: 5 0;
+   }    
+   
+.socials a:nth-child(1) {
+    background: #f8f9fa;
+    }.socials a:nth-child(2) {
+    background: 	#f8f9fa;
+    }.socials a:nth-child(3) {
+    background: #f8f9fa;
+    }.socials a:nth-child(4) {
+    background: #f8f9fa;
+    }
+
+   /* .socials a:nth-child(1) {
+   background: #3b5998;
+   }.socials a:nth-child(2) {
+   background: 	#25D366;
+   }.socials a:nth-child(3) {
+   background: #007bb5;
+   }.socials a:nth-child(4) {
+   background: #ea4c89;
+   } */
+
+.social-title {
+    text-transform: uppercase;
+    font-family: "Roboto",sans-serif;
+    font-weight: 700; 
+   }
+
+@media (min-width: 481px){
+ .social-title {
+    text-transform: uppercase;
+    font-family: "Roboto",sans-serif;
+    font-weight: 700;
+}
+}
+   @media (max-width: 800px){
+       .mx-30{
+           margin-bottom: 30px;
+       }
+
+   }
+

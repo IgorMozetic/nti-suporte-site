@@ -1,0 +1,52 @@
+/* carousel do topo da Home page ----------------------------------------------------------------------- */
+.link_slide {
+    color: #ffffff !important;
+    /*background: #59AA55;
+    opacity: .6;*/
+    transition: opacity .15s ease;
+    
+ }
+
+.img-slider{ /*altura da imagem (e na pratica, do proprio carrossel). os valores sao iguais para garantir que o componente nao mude de tamanho quando muda de imagem */
+    min-height: 200px;
+    max-height: 200px!important;
+    /* opacity: 0.5; */
+}
+
+
+.carousel-item .row .col-md-6{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+.carousel-control-next, .carousel-control-prev {
+   
+    width: 3%;
+    background-color: #FFFFFF;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+    
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #59AA55!important;
+}
+
+
+.slider-transparent{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: #555; */
+    opacity: .5;
+    transition: opacity .15s ease;
+    
+}
+
+.slider-transparent:hover{
+    background: none;
+    opacity: 1.0;
+}
