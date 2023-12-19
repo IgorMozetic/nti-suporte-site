@@ -1,3 +1,29 @@
+h1,
+h2,
+h3 {
+  color: #006d35;
+}
+
+/* breadcrumb */
+
+.breadcrumb {
+  background-color: #efefef;
+}
+
+.breadcrumb ol {
+  padding: 10px 20px !important;
+  border-radius: 5px;
+}
+
+a {
+  color: #02672d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* home */
 
 .home #content .card {
