@@ -457,8 +457,7 @@ wrapper-cabecalho {
 .menu ul {
   display: none;
   flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px 0;
   margin-bottom: 0;
   list-style: none;
   text-transform: capitalize;
@@ -466,7 +465,7 @@ wrapper-cabecalho {
 
 .menu li:hover > .sub-menu {
   display: inline;
-  max-width: 250px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   z-index: +4;
@@ -501,6 +500,8 @@ wrapper-cabecalho {
   width: auto;
   z-index: +4;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 5px;
 }
 
 #navigation.menu-header {
@@ -526,27 +527,4 @@ nav div.collapse.show ul ul {
 
 .navbar {
   padding: 0px !important;
-}
-.navbar-brand {
-  /*margin-left: 3rem;*/
-}
-
-/* breadcrumb */
-
-.breadcrumb {
-  background-color: #efefef;
-}
-
-.breadcrumb ol {
-  padding: 10px 20px !important;
-  border-radius: 5px;
-}
-
-.breadcrumb a {
-  color: #02672d;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
 }

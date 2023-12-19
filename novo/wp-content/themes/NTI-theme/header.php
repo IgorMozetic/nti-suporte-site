@@ -131,16 +131,16 @@
     </div>
 
     <!-- inicia o menu do NTI-->
-    <div class="container-fluid">
-      <div class="row menu-header" id="navigation">
+    <div class="w-100">
+      <div class="menu-header" id="navigation">
         <div class="container-sm ">
           <nav role="navigation" aria-label="Menu principal" class="navbar navbar-expand-lg navbar-dark h-nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-              <ul class="nav navbar-nav mr-auto">
-                <div class="menu-menu-nti-topo-container">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mr-auto w-100">
+                <div class="menu-menu-nti-topo-container w-100">
                   <ul id="menu-menu-nti-topo" class="menu">
                     <li id="menu-item-2997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2997"><a href="http://servicos.ufabc.edu.br/">Central de Serviços</a></li>
                     <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="/?post_type=docs">Manuais e Tutoriais</a></li>
