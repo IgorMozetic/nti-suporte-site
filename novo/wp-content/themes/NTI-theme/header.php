@@ -20,6 +20,7 @@
   <!-- style -->
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/header.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/footer.css' ?>">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
 
   <?php wp_meta(); ?>
   <?php wp_head(); ?>
@@ -27,7 +28,7 @@
   <title>Document</title>
 </head>
 
-<body>
+<body class="bg-light">
   <header id="navbar_top">
     <!-- barra brasil -->
     <div id="barra-brasil">

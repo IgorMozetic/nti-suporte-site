@@ -536,3 +536,17 @@ nav div.collapse.show ul ul {
 .breadcrumb {
   background-color: #efefef;
 }
+
+.breadcrumb ol {
+  padding: 10px 20px !important;
+  border-radius: 5px;
+}
+
+.breadcrumb a {
+  color: #02672d;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
