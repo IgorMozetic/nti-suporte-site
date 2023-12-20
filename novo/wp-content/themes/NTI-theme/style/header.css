@@ -1,7 +1,12 @@
 /* Variaveis */
 :root {
   --amarelo: #ffd200;
-  /*--verde: #ffffff;*/
+  --white: #fff;
+  --b-green: #006d35;
+  --b-gray: #f1f1f1;
+  --border-gray: #dfdfdf;
+  --dark-gray: #606060;
+  --b-dark-green: #00420b;
 }
 
 /*color*/
@@ -10,23 +15,20 @@
   font-size: 2em;
 }
 .title-header h2 {
-  color: white;
+  color: var(--white);
 }
 .b-header {
-  background: linear-gradient(to bottom, #006d35 0, #0a5517 100%);
-  border-bottom: 1px solid #006d35;
+  background: linear-gradient(to bottom, var(--b-green) 0, #0a5517 100%);
+  border-bottom: 1px solid var(--b-green);
 }
-header #accessibility a,
-header #portal-siteactions a,
-header #language a {
-  color: #abebb8;
-  hover: #009110;
+
+header #portal-siteactions a {
   color: #00ad08;
 }
 
 header #accessibility a span {
   background-color: #dcffe3;
-  color: #006d35;
+  color: var(--b-green);
 }
 header #social-icons a {
   color: #abebb8;
@@ -46,12 +48,12 @@ header #social-icons a {
 }
 #barra-brasil {
   height: 32px;
-  background: #f1f1f1;
+  background: var(--b-gray);
   font-weight: bold;
   font-size: 12px;
   line-height: 32px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--border-gray);
   box-sizing: content-box;
 }
 #barra-brasil ul {
@@ -99,12 +101,12 @@ header #social-icons a {
 }
 #barra-brasil {
   height: 32px;
-  background: #f1f1f1;
+  background: var(--b-gray);
   font-weight: bold;
   font-size: 12px;
   line-height: 32px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--border-gray);
   box-sizing: content-box;
 }
 #barra-brasil a {
@@ -130,7 +132,7 @@ div#wrapper-barra-brasil {
   float: left;
   padding: 7px 0 6px;
   width: 115px;
-  border-right: 2px solid #dfdfdf;
+  border-right: 2px solid var(--border-gray);
 }
 #barra-brasil .brasil-flag .link-barra {
   display: block;
@@ -162,8 +164,8 @@ div#wrapper-barra-brasil {
   transition: 0.1s;
   width: 166px !important;
   display: block;
-  border: 2px solid #dfdfdf;
-  color: #606060;
+  border: 2px solid var(--border-gray);
+  color: var(--dark-gray);
   visibility: hidden;
   position: relative;
 }
@@ -171,7 +173,7 @@ div#wrapper-barra-brasil {
 #barra-brasil #brasil-vlibras .link-vlibras a:focus,
 #barra-brasil #brasil-vlibras .link-vlibras a:active {
   visibility: visible;
-  background: #f1f1f1;
+  background: var(--b-gray);
   z-index: 8;
 }
 #barra-brasil #brasil-vlibras .logo-vlibras:hover + .link-vlibras,
@@ -183,10 +185,10 @@ div#wrapper-barra-brasil {
   width: 132px !important;
   height: 50px !important;
   display: inline-table;
-  border: 2px solid #dfdfdf;
+  border: 2px solid var(--border-gray);
   padding: 10px 24px 10px 24px;
   visibility: visible;
-  background: #f1f1f1;
+  background: var(--b-gray);
   z-index: 8;
   line-height: 1.75em;
 }
@@ -212,25 +214,25 @@ div#wrapper-barra-brasil {
   right: 90px !important;
 }
 #barra-brasil .list .first {
-  border-left: 2px solid #dfdfdf;
+  border-left: 2px solid var(--border-gray);
 }
 #barra-brasil .list-item {
   display: inline-block;
   height: 32px;
   line-height: 32px;
-  border-right: 2px solid #dfdfdf;
+  border-right: 2px solid var(--border-gray);
 }
 #barra-brasil .list-item a {
   padding: 8px 15px 8px 13px;
 }
 #barra-brasil .link-barra {
-  color: #606060;
+  color: var(--dark-gray);
 }
 #barra-brasil #menu-icon {
   position: absolute;
   top: 3px;
-  border-top: 15px double #606060;
-  border-bottom: 5px solid #606060;
+  border-top: 15px double var(--dark-gray);
+  border-bottom: 5px solid var(--dark-gray);
   display: none;
   width: 20px;
   right: 5px;
@@ -241,7 +243,7 @@ div#wrapper-barra-brasil {
     padding: 5px 3px 0px 3px;
   }
   #barra-brasil .list .first {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--border-gray);
   }
   #barra-brasil nav:hover #menu-icon,
   #barra-brasil nav:active #menu-icon,
@@ -251,7 +253,7 @@ div#wrapper-barra-brasil {
   body.contraste #barra-brasil nav:hover #menu-icon,
   body.contraste #barra-brasil nav:active #menu-icon,
   body.contraste #barra-brasil nav:focus #menu-icon {
-    background-color: #606060 !important;
+    background-color: var(--dark-gray) !important;
   }
   #barra-brasil ul.list,
   #barra-brasil ul.list:active,
@@ -269,7 +271,7 @@ div#wrapper-barra-brasil {
     text-align: center;
     height: 30px;
     background: #eee;
-    border: 1px solid #dfdfdf;
+    border: 1px solid var(--border-gray);
   }
   #barra-brasil .list-item a {
     padding: 8px 30px 8px 28px;
@@ -278,8 +280,8 @@ div#wrapper-barra-brasil {
     background: #000 !important;
   }
   body.contraste #menu-icon {
-    border-top: 15px double #fff !important;
-    border-bottom: 5px solid #fff !important;
+    border-top: 15px double var(--white) !important;
+    border-bottom: 5px solid var(--white) !important;
   }
   #barra-brasil .list a:active li,
   #barra-brasil .list a:focus li,
@@ -289,7 +291,7 @@ div#wrapper-barra-brasil {
   body.contraste #barra-brasil .list a:active li,
   body.contraste #barra-brasil .list a:focus li,
   body.contraste #barra-brasil .list a:hover li {
-    background: #606060 !important;
+    background: var(--dark-gray) !important;
   }
   #barra-brasil nav:active ul.list,
   #barra-brasil nav:focus ul.list,
@@ -372,7 +374,6 @@ wrapper-cabecalho {
 }
 .title-header h2 {
   font-size: 1.1em;
-  /*font-weight: 800;*/
   text-transform: none;
   line-height: 1.2em;
   text-align: center;
@@ -382,13 +383,10 @@ wrapper-cabecalho {
   height: 70%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
-
 .search-col {
   border-radius: 0.25em;
 }
-
 .search-col form div {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -413,7 +411,7 @@ wrapper-cabecalho {
 /* Menu ---------------------------------------------------------------------------- */
 /*  sobrescrevendo a classe menu do wodpress  */
 .menu-header {
-  background: #00420b;
+  background: var(--b-dark-green);
 }
 .menu {
   margin: 0px;
@@ -422,7 +420,7 @@ wrapper-cabecalho {
   width: 100%;
   height: auto;
   display: flex;
-  background: #00420b;
+  background: var(--b-dark-green);
 }
 .menu > li {
   display: inline;
@@ -445,7 +443,7 @@ wrapper-cabecalho {
 }
 
 .menu a:hover {
-  color: #fff;
+  color: var(--white);
 }
 .menu h5 {
   margin-top: 0;
@@ -469,7 +467,7 @@ wrapper-cabecalho {
   width: 100%;
   height: auto;
   z-index: +4;
-  background: #00420b;
+  background: var(--b-dark-green);
 }
 
 .menu li:hover > .sub-menu li {
@@ -490,7 +488,6 @@ wrapper-cabecalho {
   width: 100%;
   height: auto;
   z-index: +4;
-  /* color: #ffd200; */
   color: #e6bd00;
 }
 
@@ -509,7 +506,7 @@ wrapper-cabecalho {
 }
 
 ul#menu-menu-nti-topo > li > a {
-  color: white;
+  color: var(--white);
 }
 
 ul#menu-menu-nti-topo > li > a:hover {
