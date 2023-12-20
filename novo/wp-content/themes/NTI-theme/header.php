@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- style -->
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/header.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/footer.css' ?>">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
 
   <?php wp_meta(); ?>
   <?php wp_head(); ?>
@@ -28,7 +28,7 @@
   <title>Document</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-light" style="min-height: 100%;">
   <header id="navbar_top">
     <!-- barra brasil -->
     <div id="barra-brasil">
