@@ -78,3 +78,10 @@ div#wrapper-footer-brasil {
   background: linear-gradient(to bottom, #00420c 0, #02672d 100%);
   border-bottom: 1px solid #006d35;
 }
+
+.footer-page-small {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
