@@ -6,7 +6,7 @@ get_header();
     <main id="main" class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12">
-          <div class="breadcrumb bg-light pt-3 m-0"><?php get_breadcrumb(); ?></div>
+          <div class="breadcrumb bg-light pt-4 m-0"><?php get_breadcrumb(); ?></div>
           <h1 class="wp-block-heading"><strong>Atendimento ao público</strong></h1>
           <p><strong>Está com dificuldades para acessar algum sistema, ou recurso de TIC da UFABC? </strong></p>
           <p><strong>Acesse a&nbsp;Central de Serviços, registrando a sua solicitação&nbsp;<a href="https://central.ufabc.edu.br/">aqui</a>.</strong></p>

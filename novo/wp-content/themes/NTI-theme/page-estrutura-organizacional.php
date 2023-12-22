@@ -5,7 +5,7 @@ get_header(); ?>
     <main id="main" class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12">
-          <div class="breadcrumb bg-light pt-3"><?php get_breadcrumb(); ?></div>
+          <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
           <div class="coordenacao-geral pb-3">
             <h3><strong>Coordenação Geral do NTI</strong></h3>
             <p>A Coordenação Geral do NTI é responsável pelo planejamento, gestão e coordenação do Núcleo de Tecnologia da Informação da UFABC.</p>

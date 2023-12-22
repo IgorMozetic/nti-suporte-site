@@ -5,7 +5,7 @@ get_header(); ?>
     <main id="main" class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12">
-          <div class="breadcrumb bg-light pt-3"><?php get_breadcrumb(); ?></div>
+          <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
           <div class="objetivos pb-2">
             <h1 class="has-text-align-left wp-block-heading">Objetivo</h1>
             <p>O NTI tem como finalidade oferecer soluções estratégicas, táticas e operacionais de Tecnologia da Informação e Comunicação (TIC) à UFABC, considerando seus pilares acadêmicos: Ensino, Pesquisa e Extensão, que permitam a Universidade alcançar com excelência seus objetivos institucionais.</p>

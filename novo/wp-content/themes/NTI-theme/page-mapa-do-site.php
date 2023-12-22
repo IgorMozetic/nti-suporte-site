@@ -3,7 +3,7 @@ get_header(); ?>
 <section class="p-2">
   <div class="container-fluid pb-3">
     <div>
-      <div class="breadcrumb bg-light pt-3"><?php get_breadcrumb(); ?></div>
+      <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
       <h1 class="title">Mapa do Site</h1>
       <!--Grid row-->
       <div class="row">
