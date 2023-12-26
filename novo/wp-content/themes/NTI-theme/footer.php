@@ -18,6 +18,9 @@
   <div class=" footer-copyright b-footer-rodape text-white  text-center "> Universidade Federal do ABC. Desenvolvido com <a alt="CMS de codigo Aberto - Wordpress" style="color:white; text-decoration:underline" href="https://br.wordpress.org/">CMS </a>de código aberto.
     <a href="/"> </a>
   </div>
+
+  <script src="<?php echo get_template_directory_uri(); ?>/js/table.js"></script>
+
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.2.1.slim.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
