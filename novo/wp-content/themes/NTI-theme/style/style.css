@@ -173,3 +173,18 @@ a:hover {
 .img-gastos-tic {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+#sistemas-institucionais .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sistemas-institucionais .card .card-footer p small {
+  font-weight: 700;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
