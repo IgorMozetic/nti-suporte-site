@@ -1,7 +1,129 @@
+/* CONFIGS */
 h1,
 h2,
 h3 {
   color: #006d35;
+}
+
+figure.figcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.titulosecao {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  box-sizing: border-box;
+  color: #4d4d4d;
+  text-align: left;
+}
+
+img {
+  border: none;
+}
+
+img.inlinetxt {
+  display: inline-block;
+  max-height: 30px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+td.classetd {
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+table {
+  border-image: none 100% / 1 / 0 stretch;
+  background-color: #ddebee;
+}
+
+table tr td,
+table tr th {
+  padding: 5px;
+  border: 1px solid;
+  text-align: left;
+}
+
+p.ptextocentralizado {
+  text-align: center;
+  background-color: transparent;
+}
+
+p.pclasseparagraf {
+  font-size: large;
+  color: rgb(77, 77, 77);
+  background-color: transparent;
+}
+
+.textosublinhado {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.textoitalico {
+  font-style: italic;
+  background-color: transparent;
+}
+
+.textoenfasecor {
+  color: red;
+  background-color: transparent;
+}
+
+.textonegrito {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+span.txtfigcapt {
+  font-weight: bolder;
+  font-style: italic;
+  color: black;
+}
+
+span.figcaptdescr {
+  color: gray;
+  font-style: italic;
+}
+
+div.quadrotexto {
+  padding: 13px;
+  margin: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+div.quadrocomandos {
+  background-color: lightgray;
+  font-family: "Courier New", monospace;
+  padding: 13px;
+  margin: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+span.txtenfasemonospace {
+  font-family: "Courier New", monospace;
+  font-weight: bolder;
+  color: black;
+}
+
+ol.olclasseinternas li {
+  counter-increment: step-counter;
+}
+
+.txtfundoamarelo {
+  background-color: #fbd603;
 }
 
 /* breadcrumb */
@@ -46,4 +168,8 @@ a:hover {
 
 .home #content .card .title-divider h3 {
   margin-bottom: 0;
+}
+
+.img-gastos-tic {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
