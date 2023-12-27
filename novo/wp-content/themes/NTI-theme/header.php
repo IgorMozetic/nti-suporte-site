@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- style -->
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/header.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/footer.css' ?>">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
 
   <?php wp_meta(); ?>
   <?php wp_head(); ?>
@@ -143,7 +143,7 @@
                 <div class="menu-menu-nti-topo-container w-100">
                   <ul id="menu-menu-nti-topo" class="menu">
                     <li id="menu-item-2997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2997"><a href="http://servicos.ufabc.edu.br/">Central de Serviços</a></li>
-                    <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="/?post_type=docs">Manuais e Tutoriais</a></li>
+                    <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="<?php echo site_url() . '/?post_type=docs' ?>">Manuais e Tutoriais</a></li>
                     <li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3002"><a href="<?php echo site_url() . '/sistemas-institucionais' ?>">Sistemas Institucionais</a></li>
                     <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4418"><a href="<?php echo site_url() . '/governanca' ?>">Governança</a>
                       <ul class="sub-menu">
