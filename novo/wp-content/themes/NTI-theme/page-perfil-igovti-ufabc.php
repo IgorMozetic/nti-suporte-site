@@ -21,7 +21,7 @@ get_header(); ?>
               <h4 class="text-center">Resultado da avaliação da UFABC no ciclo de 2014:</h4>
               <figure class="size-full"><img decoding="async" loading="lazy" src="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014.jpg" alt="" class="wp-image-4450" srcset="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014.jpg 649w, https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014-300x152.jpg 300w" sizes="(max-width: 649px) 100vw, 649px"></figure>
             </div>
-            <p><small>Conheça os dados completos da UFABC no <a href="/wp-content/uploads/2023/05/iGovTI2016.pdf" target="_blank" rel="noreferrer noopener">Perfil GovTI2016</a>.</small></p>
+            <p><small>Conheça os dados completos da UFABC no <a href="<?php echo site_url() . '/wp-content/uploads/2023/12/uploads/2023/05/iGovTI2016.pdf' ?>" target="_blank" rel="noreferrer noopener">Perfil GovTI2016</a>.</small></p>
           </div>
         </div>
       </div>

@@ -144,23 +144,23 @@
                   <ul id="menu-menu-nti-topo" class="menu">
                     <li id="menu-item-2997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2997"><a href="http://servicos.ufabc.edu.br/">Central de Serviços</a></li>
                     <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="/?post_type=docs">Manuais e Tutoriais</a></li>
-                    <li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3002"><a href="https://nti.ufabc.edu.br/sistemas-institucionais/">Sistemas Institucionais</a></li>
-                    <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4418"><a href="#">Governança</a>
+                    <li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3002"><a href="<?php echo site_url() . '/sistemas-institucionais' ?>">Sistemas Institucionais</a></li>
+                    <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4418"><a href="<?php echo site_url() . '/governanca' ?>">Governança</a>
                       <ul class="sub-menu">
-                        <li id="menu-item-4421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4421"><a href="https://nti.ufabc.edu.br/cetic/">CETIC</a></li>
-                        <li id="menu-item-4420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4420"><a href="https://nti.ufabc.edu.br/pdti/">PDTI</a></li>
-                        <li id="menu-item-4422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4422"><a href="https://nti.ufabc.edu.br/politicas-e-normas-de-tic/">Políticas e normas de TIC</a></li>
-                        <li id="menu-item-4419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4419"><a href="https://nti.ufabc.edu.br/relatorios-e-transparencia-de-tic/">Relatórios e transparência de TIC</a></li>
+                        <li id="menu-item-4421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4421"><a href="<?php echo site_url() . '/cetic' ?>">CETIC</a></li>
+                        <li id="menu-item-4420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4420"><a href="<?php echo site_url() . '/pdti' ?>">PDTI</a></li>
+                        <li id="menu-item-4422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4422"><a href="<?php echo site_url() . '/politicas-e-normas-de-tic' ?>">Políticas e normas de TIC</a></li>
+                        <li id="menu-item-4419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4419"><a href="<?php echo site_url() . '/relatorios-e-transparencia-de-tic' ?>">Relatórios e transparência de TIC</a></li>
                       </ul>
                     </li>
-                    <li id="menu-item-3011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3011"><a href="#">Sobre o NTI</a>
+                    <li id="menu-item-3011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3011"><a href="<?php echo site_url() . '/sobre-o-nti' ?>">Sobre o NTI</a>
                       <ul class="sub-menu">
-                        <li id="menu-item-3015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3015"><a href="https://nti.ufabc.edu.br/sobre-o-nti/">Objetivos, missão e visão</a></li>
-                        <li id="menu-item-3008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3008"><a href="https://nti.ufabc.edu.br/estrutura-organizacional/">Estrutura organizacional</a></li>
+                        <li id="menu-item-3015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3015"><a href="<?php echo site_url() . '/objetivos' ?>">Objetivos, missão e visão</a></li>
+                        <li id="menu-item-3008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3008"><a href="<?php echo site_url() . '/estrutura-organizacional' ?>">Estrutura organizacional</a></li>
                       </ul>
                     </li>
-                    <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://nti.ufabc.edu.br/contato/">Contato</a></li>
-                    <li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4323"><a href="https://nti.ufabc.edu.br/mapa-do-site/">Mapa do Site</a></li>
+                    <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="<?php echo site_url() . '/contato' ?>">Contato</a></li>
+                    <li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4323"><a href="<?php echo site_url() . '/mapa-do-site' ?>">Mapa do Site</a></li>
                   </ul>
                 </div>
               </ul>
