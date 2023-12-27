@@ -357,3 +357,175 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+
+.home .card > div.mais,
+.home a.text-right.mais {
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.home .sistemasinstitucionais div:nth-child(3) img,
+.home .sistemasinstitucionais div:nth-child(4) img {
+  width: 90px;
+}
+
+@media (max-width: 768px) {
+  .home .card .sistemasinstitucionais {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .card {
+    padding-bottom: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .home .card .sistemasinstitucionais {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .home .sistemasinstitucionais div:nth-child(1) {
+    margin-top: -10px !important;
+  }
+  .home .sistemasinstitucionais div:nth-child(2) {
+    margin-top: -70px !important;
+  }
+  .home .sistemasinstitucionais div:nth-child(3) {
+    margin-top: -35px !important;
+  }
+}
+
+/* single pages */
+.single-avisos p {
+  margin: 1.5rem 0;
+}
+
+.single-avisos figure {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.single-avisos img {
+  width: 500px;
+}
+
+@media (max-width: 576px) {
+  .single-avisos img {
+    width: 100%;
+  }
+}
+
+/* BETTERDOCS */
+.docs-cat-title-inner {
+  border-color: #28a745 !important;
+  border-bottom: 0px solid #ffffff !important;
+}
+.docs-cat-link-btn {
+  background-color: #28a745 !important;
+  font-size: 16px;
+  color: #ffffff !important;
+  border-color: #28a745 !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  padding-top: 10px !important;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.docs-cat-link-btn:visited {
+  background-color: #28a745 !important;
+  font-size: 16px;
+  color: #ffffff !important;
+  border-color: #28a745 !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  padding-top: 10px !important;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.docs-cat-link-btn:hover {
+  background-color: #ffffff !important;
+  font-size: 16px;
+  color: #02672d !important;
+  border-color: var(--amarelo) !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  padding-top: 10px !important;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.docs-single-title .betterdocs-entry-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+
+.betterdocs-wrapper.betterdocs-docs-archive-wrapper
+  .betterdocs-category-grid-wrapper
+  .betterdocs-category-grid-inner-wrapper.masonry
+  > .betterdocs-single-category-wrapper {
+  margin-bottom: 15px !important;
+}
+
+.betterdocs-wrapper.betterdocs-docs-archive-wrapper
+  .betterdocs-category-grid-wrapper
+  .betterdocs-category-grid-inner-wrapper
+  > .betterdocs-single-category-wrapper
+  .betterdocs-single-category-inner {
+  height: 330px;
+}
+
+.betterdocs-wrapper.betterdocs-docs-archive-wrapper
+  .betterdocs-category-grid-wrapper
+  .betterdocs-category-grid-inner-wrapper
+  .betterdocs-single-category-wrapper
+  .betterdocs-footer
+  a {
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+
+@media (max-width: 992px) {
+  .betterdocs-wrapper.betterdocs-docs-archive-wrapper
+    .betterdocs-category-grid-wrapper
+    .betterdocs-category-grid-inner-wrapper
+    > .betterdocs-single-category-wrapper
+    .betterdocs-single-category-inner {
+    height: 480px;
+  }
+}
+
+@media (max-width: 670px) {
+  .betterdocs-wrapper.betterdocs-docs-archive-wrapper
+    .betterdocs-category-grid-wrapper
+    .betterdocs-category-grid-inner-wrapper
+    > .betterdocs-single-category-wrapper
+    .betterdocs-single-category-inner {
+    height: 100%;
+  }
+  .betterdocs-wrapper.betterdocs-docs-archive-wrapper
+    .betterdocs-category-grid-wrapper
+    .betterdocs-category-grid-inner-wrapper
+    .betterdocs-single-category-wrapper
+    .betterdocs-footer
+    a {
+    position: relative;
+  }
+}
