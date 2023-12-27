@@ -8,37 +8,38 @@ use WeDevs\WeDocs\Shortcode;
 
 use function PHPSTORM_META\type; ?>
 
-<main id="content">
+<main id="content" class="home">
   <div class="container">
     <div class="row">
-      <?php get_template_part('includes/slider-home.php'); ?>
+      <!-- slider -->
+      <?php get_template_part('parts/slider'); ?>
     </div>
-    <div class="row py-3"> <!--BOTOES CENTRAL DE SERVICOS E MANUAIS E TUTORIAIS-->
-      <div class="col-sm-12 col-md-6 mb-2">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 my-3">
         <a class="" href="https://servicos.ufabc.edu.br"> <img src="<?php echo get_stylesheet_directory_uri() . '/images/central_banner.png' ?>" class="card-img-top" alt="..."></a>
       </div>
-      <div class="col-sm-12 col-md-6 mb-2">
+      <div class="col-sm-12 col-md-6 my-3">
         <a class="" href="<?php site_url(); ?>/?post_type=docs"> <img src="<?php echo get_stylesheet_directory_uri() . '/images/manuais_tutoriais.png' ?>" class="card-img-top" alt="..."></a>
       </div>
     </div>
     <div class="content-fluid">
       <div class="row">
-        <div class="col-sm-12 col-md-3 mb-2"><!-- inicia Avisos -->
+        <div class="col-sm-12 col-md-3 mb-2">
           <?php
           $loop = new WP_Query(
             array(
-              'post_type' => 'event',
-              'event_category' => 'comunicadonti',
+              'post_type' => 'avisos',
               'posts_per_page' => 4,
             ),
           );
           ?>
           <?php
           if ($loop->have_posts()) : ?>
+
             <div class="card h-100">
               <?php
               echo '<div class="title-divider av-divider">
-                      <h3><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Avisos</h3> </div>';
+                      <h3><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Avisos</h3> </div>';
               echo '<div>';
               echo '<ul class="list-group pb-3">';
               while ($loop->have_posts()) {
@@ -59,10 +60,9 @@ use function PHPSTORM_META\type; ?>
               </div>
             </div>
           <?php endif; ?>
-        </div><!-- Fim Avisos -->
-        <div class="col-sm-12 col-md-6 mb-2"> <!--INICIO MAIS ACESSADOS-->
+        </div>
+        <div class="col-sm-12 col-md-6 mb-2">
           <?php
-
           $loop = new WP_Query(
             array(
               'post_type' => 'docs',
@@ -71,14 +71,13 @@ use function PHPSTORM_META\type; ?>
               'posts_per_page' => 4,
             ),
           );
-
           ?>
           <?php
           if ($loop->have_posts()) : ?>
             <div class="card h-100">
               <?php
               echo '<div class="title-divider  acessados-divider">
-                                <h3><i class="fa fa-files-o" aria-hidden="true"></i> Mais acessados </h3></div>';
+                      <h3><i class="fa fa-files-o" aria-hidden="true"></i> Mais acessados </h3></div>';
               echo '<div>';
               echo '<ul class="list-group pb-3">';
               while ($loop->have_posts()) {
@@ -87,11 +86,7 @@ use function PHPSTORM_META\type; ?>
               }
               echo '</ul>';
               echo '</div>';
-
               wp_reset_query(); ?>
-
-
-
             <?php endif; ?>
             <div class="text-right mais">
               <a class="" href="<?php $url = esc_url(home_url('/?post_type=docs'));
@@ -100,11 +95,10 @@ use function PHPSTORM_META\type; ?>
               </a>
             </div>
             </div>
-        </div><!--FIM MAIS ACESSADOS-->
+        </div>
 
-        <div class="col-sm-12 col-md-3 mb-2"><!--INICIO FAQ-->
+        <div class="col-sm-12 col-md-3 mb-2">
           <?php
-
           $loop = new WP_Query(
             array(
               'post_type' => 'docs',
@@ -113,15 +107,11 @@ use function PHPSTORM_META\type; ?>
               'posts_per_page' => 3,
             ),
           );
-
-          ?>
-          <?php
           if ($loop->have_posts()) : ?>
-
             <div class="card h-100">
               <?php
               echo '<div class="title-divider faq-divider">
-                                <h3><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ</h3> </div>';
+                      <h3><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ</h3> </div>';
               echo '<div>';
               echo '<ul class="list-group pb-3">';
               while ($loop->have_posts()) {
@@ -139,16 +129,13 @@ use function PHPSTORM_META\type; ?>
                 </a>
               </div>
             </div>
-
           <?php endif; ?>
-        </div><!--FIM FAQ-->
+        </div>
       </div>
-
     </div>
 
-
     <div class="row">
-      <div class="col-sm-12 col-md-3 mb-2"><!-- inicia cafe com processos -->
+      <div class="col-sm-12 col-md-3 mb-2">
         <div class="card h-100">
           <div class="title-divider proc-divider">
             <h3><i class="fa fa-briefcase" aria-hidden="true"></i> Processos</h3>
@@ -162,39 +149,36 @@ use function PHPSTORM_META\type; ?>
                 <a class="link-card-list" href="https://processos.ufabc.edu.br"> <i class="fa fa-external-link" aria-hidden="true"></i> Gestão de Processos UFABC</a>
               </li>
             </ul>
-            <?php get_sidebar('areaprocessos'); ?>
           </div>
         </div>
-      </div><!-- Fim cafe com processos -->
+      </div>
 
-      <div class="col-sm-12 col-md-9 mb-2"><!-- inicia sistemas institucionais -->
+      <div class="col-sm-12 col-md-9 mb-2">
         <div class="card h-100">
           <div class="title-divider sist-divider">
             <h3><i class="fa fa-briefcase" aria-hidden="true"></i> Sistemas Institucionais</h3>
           </div>
           <div class="h-100">
             <div class="sistemasinstitucionais w-100 h-100 align-items-center justify-content-evenly">
-
               <div class="m-auto">
-                <a href="http://acesso.ufabc.edu.br/site/login"><img class="sistemasinstitucionaisimg" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/01/acesso1-1-1024x303.png" alt="" width="138" height="38"></a>
+                <a href="http://acesso.ufabc.edu.br/site/login"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/acesso.png" alt=""></a>
               </div>
               <div class="m-auto">
-                <a href="https://moodle.ufabc.edu.br/"><img class="sistemasinstitucionaisimg" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/01/moodle.jpg" alt="" width="138" height="38"></a>
+                <a href="https://moodle.ufabc.edu.br/"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/moodle.png" alt=""></a>
               </div>
               <div class="m-auto">
-                <a href="http://sig.ufabc.edu.br/sigaa"><img class="sistemasinstitucionaisimg" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/01/sigaa2.jpg" alt="" width="138" height="38"></a>
+                <a href="http://sig.ufabc.edu.br/sigaa"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigaa.png" alt=""></a>
               </div>
               <div class="m-auto">
-                <a href="http://sig.ufabc.edu.br/sigrh"><img class="sistemasinstitucionaisimg" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/01/sigrh2.jpg" alt="" width="138" height="38"></a>
+                <a href="http://sig.ufabc.edu.br/sigrh"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigrh.png" alt=""></a>
               </div>
-
-              <a class="text-right mais" href="<?php site_url(); ?>/?page_id=1859">
+              <a class="text-right mais" href="<?php echo site_url() . '/sistemas-institucionais' ?>">
                 Mais Sistemas <i class="fa fa-chevron-right" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
-      </div> <!-- Fim sistemas institucionais -->
+      </div>
     </div>
   </div>
 

@@ -1,5 +1,7 @@
 <?php
 
+require get_template_directory() . '/custom-post-type/slider-home.php';
+require get_template_directory() . '/custom-post-type/avisos.php';
 
 //   1 - Add Image Category Field
 add_action('category_add_form_fields', 'add_category_image', 10, 2);
