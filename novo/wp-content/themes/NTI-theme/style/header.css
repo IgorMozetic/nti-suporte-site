@@ -416,11 +416,11 @@ wrapper-cabecalho {
 .menu {
   margin: 0px;
   padding: 0px;
-
   width: 100%;
   height: auto;
   display: flex;
   background: var(--b-dark-green);
+  justify-content: space-between;
 }
 .menu > li {
   display: inline;
@@ -498,7 +498,7 @@ wrapper-cabecalho {
   z-index: +4;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 5px;
+  margin-top: 0px !important;
 }
 
 #navigation.menu-header {
