@@ -377,6 +377,14 @@ a:hover {
   right: 5px;
 }
 
+.single-nti-service .card > div.mais {
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 12px;
+  right: 5px;
+}
+
 .home .sistemasinstitucionais div:nth-child(3) img,
 .home .sistemasinstitucionais div:nth-child(4) img {
   width: 90px;
