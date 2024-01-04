@@ -368,20 +368,11 @@ a:hover {
 }
 
 .home .card > div.mais,
-.home a.text-right.mais,
-.single-avisos .card > div.mais {
+.home a.text-right.mais {
   padding-right: 1rem;
   padding-top: 1rem;
   position: absolute;
   bottom: 5px;
-  right: 5px;
-}
-
-.single-nti-service .card > div.mais {
-  padding-right: 1rem;
-  padding-top: 1rem;
-  position: absolute;
-  bottom: 12px;
   right: 5px;
 }
 

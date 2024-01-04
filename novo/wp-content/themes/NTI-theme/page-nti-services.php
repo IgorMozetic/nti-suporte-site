@@ -28,14 +28,11 @@ get_header(); ?>
       <?php if (count($ntiServices) > 0) {
         foreach ($ntiServices as $ntiService) {
           extract($ntiService); ?>
-          <div class="card col-md-3 my-2">
-            <div class="card-body pb-4 mb-5">
+          <div class="card my-2">
+            <div class="card-body ">
               <h5 class="card-title"><?php echo $title; ?></h5>
-              <hr class="p-0 my-3">
-              <p class=" card-text"><?php echo $excerpt; ?></p>
-            </div>
-            <div class="text-right mais">
-              <a href=<?php echo $slug; ?> class="btn">Acessar serviço</a>
+              <p class="card-text"><?php echo $excerpt; ?></p>
+              <a href=<?php echo $slug; ?> class="btn">Acessar aviso</a>
             </div>
           </div>
       <?php
@@ -44,6 +41,4 @@ get_header(); ?>
     </div>
   </div>
 </div>
-<div class="footer-page-small">
-  <?php get_footer(); ?>
-</div>
+<?php get_footer(); ?>

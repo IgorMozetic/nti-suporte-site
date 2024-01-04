@@ -19,7 +19,7 @@ use function PHPSTORM_META\type; ?>
         <a class="" href="https://servicos.ufabc.edu.br"> <img src="<?php echo get_stylesheet_directory_uri() . '/images/central_banner.png' ?>" class="card-img-top" alt="..."></a>
       </div>
       <div class="col-sm-12 col-md-6 my-3">
-        <a class="" href="<?php site_url(); ?>/?post_type=docs"> <img src="<?php echo get_stylesheet_directory_uri() . '/images/manuais_tutoriais.png' ?>" class="card-img-top" alt="..."></a>
+        <a class="" href="<?php echo site_url(); ?>/?post_type=docs"> <img src="<?php echo get_stylesheet_directory_uri() . '/images/manuais_tutoriais.png' ?>" class="card-img-top" alt="..."></a>
       </div>
     </div>
     <div class="content-fluid">
@@ -54,8 +54,7 @@ use function PHPSTORM_META\type; ?>
 
               wp_reset_query(); ?>
               <div class="text-right mais">
-                <a class="" href="<?php $url = esc_url(home_url('?event_category=comunicadonti'));
-                                  echo $url; ?>">
+                <a class="" href="<?php echo site_url() . '/avisos-nti' ?>">
                   Mais Avisos <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
               </div>

@@ -35,14 +35,10 @@ get_header(); ?>
       <?php if (count($avisos) > 0) {
         foreach ($avisos as $aviso) {
           extract($aviso); ?>
-          <div class="card col-md-3 my-2">
-            <img class="card-img-top m-auto " style="width: 200px; height:200px" src="<?php echo $image ?>" alt="<?php echo esc_attr($title); ?>">
-            <hr class="p-0 m-0">
-            <div class="card-body pb-4 mb-4">
+          <div class="card my-2">
+            <div class="card-body ">
               <h5 class="card-title"><?php echo $title; ?></h5>
               <p class="card-text"><?php echo $excerpt; ?></p>
-            </div>
-            <div class="text-right mais">
               <a href=<?php echo $slug; ?> class="btn">Acessar aviso</a>
             </div>
           </div>
