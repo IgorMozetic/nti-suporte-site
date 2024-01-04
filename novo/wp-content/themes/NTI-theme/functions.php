@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory() . '/custom-post-type/avisos.php';
+require get_template_directory() . '/custom-post-type/nti-service.php';
 flush_rewrite_rules(false);
 
 //   1 - Add Image Category Field
@@ -269,7 +270,7 @@ function add_custom_taxonomy_script()
       });
     });
   </script>
-<?php
+  <?php
 }
 
 //Add new column heading
@@ -440,348 +441,252 @@ if (!function_exists('sc_get_related_posts_for_single')) {
     ob_start();
     $id = get_the_ID();
     /*@ Get current post's categories */
-    $categories = get_the_category($id); // Disabled this if you want tag wise posts 
+    $tags = get_the_tags($id); // Disabled this if you want tag wise posts 
     /*@ Get current post's Tags */
     // $categories = wp_get_post_tags($id); // Enable this for tags wise related posts
 
-    if (!empty($categories)) :
+    if (!empty($tags)) :
       /*@ Pluck all categories Ids */
-      $categories_ids = array_column($categories, 'term_id');
+      $tag_names = array_column($tags, 'name');
       $related_args = [
-        'post_status'         => 'publish',
-        'category__in'        => $categories_ids, // Disabled this if you want tag wise posts
-        //'tag__in'        => $categories_ids, // Enable this for tag wise related posts
+        'post_type'           => 'avisos',
+        'tag'                 => $tag_names,
         'post__not_in'        => [$id], // Exclude Current Post
         'posts_per_page'      => 3, // Number of related posts to show
-        'ignore_sticky_posts' => 1
+        'ignore_sticky_posts' => 1,
+        'orderby' => 'title', // orders by page title
+        'order' => 'ASC' // orders page title alphabetically
       ];
       $get_posts = new WP_Query($related_args);
       if ($get_posts->have_posts()) :
-        echo '<div class="bg-light ">';
-        echo '<div class="container-fluid ">';
-        echo '<div class="title"><h4>Relacionadas</h4></div>';
-        echo '<div  class="row">';
-        while ($get_posts->have_posts()) : $get_posts->the_post();
-          echo '<div  class="col-md-6 col-lg-4 mb-2 ">';
-          echo '<div  class="card bg-secondary p-2 border-bottom border-4 rounded-bottom rounded-1">';
-          echo '<a href="' . get_the_permalink() . '"><div class="card-img img-post-rel">' . get_the_post_thumbnail() . '</div><div class="title h-25">' . get_the_title() . '</div></a>';
-          echo '</div>';
-          echo '</div>';
-        endwhile;
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-      endif;
-    endif;
-    return ob_get_clean();
-  }
-  add_shortcode('prefix_related_posts_for_single', 'sc_get_related_posts_for_single');
-}
-
-/**
- * If the theme doesn't have any single doc handler, load that from
- * the plugin.
- *
- * @param string $template
- *
- * @return string
- */
-function template_loader($template)
-{
-  $find = ['single-ntiservice.php'];
-  $file = '';
-
-  if (is_single() && get_post_type() == 'ntiservice') {
-    $file   = 'single-ntiservice.php';
-    $find[] = $file;
-    $find[] = wedocs()->theme_dir_path() . $file;
-  }
-
-  if ($file) {
-    $template = locate_template($find);
-
-    if (!$template) {
-      $template = wedocs()->template_path() . $file;
-    }
-  }
-  return $template;
-}
-
-function wpdocs_ntiservice_init()
-{
-  $labels = array(
-    'name'                  => _x('Ntiservices', 'Post type general name', 'textdomain'),
-    'singular_name'         => _x('Ntiservice', 'Post type singular name', 'textdomain'),
-    'menu_name'             => _x('Ntiservices', 'Admin Menu text', 'textdomain'),
-    'name_admin_bar'        => _x('Ntiservices', 'Add New on Toolbar', 'textdomain'),
-    'add_new'               => __('Adicionar novo', 'textdomain'),
-    'add_new_item'          => __('Adicionar novo Serviço', 'textdomain'),
-    'new_item'              => __('Novo serviço', 'textdomain'),
-    'edit_item'             => __('Editar serviço', 'textdomain'),
-    'view_item'             => __('Visualizar serviço', 'textdomain'),
-    'all_items'             => __('Todos Serviços', 'textdomain'),
-    'search_items'          => __('Buscar serviços', 'textdomain'),
-    'parent_item_colon'     => __('Serviço Ascendente:', 'textdomain'),
-    'not_found'             => __('Serviço não encontrado.', 'textdomain'),
-    'not_found_in_trash'    => __('Serviço não encontrado na lixeira.', 'textdomain'),
-    'featured_image'        => _x('Imagem Destacada', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain'),
-    'set_featured_image'    => _x('Definir Imagem Destacada', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain'),
-    'remove_featured_image' => _x('Remover Imagem Destacada', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain'),
-    'use_featured_image'    => _x('Use como Imagem Destacada', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain'),
-    'archives'              => _x('Ntiservice archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain'),
-    'insert_into_item'      => _x('Insert into ntiservice', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'textdomain'),
-    'uploaded_to_this_item' => _x('Uploaded to this ntiservice', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'textdomain'),
-    'filter_items_list'     => _x('Filter ntiservices list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'textdomain'),
-    'items_list_navigation' => _x('Ntiservices list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'textdomain'),
-    'items_list'            => _x('Ntiservices list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain'),
-  );
-  $args = array(
-    'labels'             => $labels,
-    'description'        => 'Ntiservice custom post type.',
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true,
-    'show_in_menu'       => true,
-    'query_var'          => true,
-    // 'rewrite'            => array( 'slug' => 'ntiservice' ),
-    'rewrite'            => false,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'hierarchical'       => true,
-    'exclude_from_search' => false,
-    'menu_position'      => 20,
-    'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
-    'taxonomies'         => array('serv_category', 'serv_tag'),
-    'show_in_rest'       => true, //to appear in Gutemberg editor
-    'rest_base'          => 'ntiservice',
-    'rest_controller_class' => 'WP_REST_Posts_Controller',
-
-  );
-
-  register_post_type('ntiservice', $args);
-}
-add_action('init', 'wpdocs_ntiservice_init');
-
-/**
- * Create two taxonomies, serv-category and serv_tag for the post type "ntiservice".
- *
- * @see register_post_type() for registering custom post types.
- */
-function wpdocs_create_ntiservice_taxonomies()
-{
-  // Add new taxonomy, make it hierarchical (like categories)
-  $labels = array(
-    'name'              => _x('Categoria de Serviços', 'taxonomy general name', 'textdomain'),
-    'singular_name'     => _x('Categoria', 'taxonomy singular name', 'textdomain'),
-    'search_items'      => __('Buscar Categorias', 'textdomain'),
-    'all_items'         => __('Todas Categorias', 'textdomain'),
-    'parent_item'       => __('Categoria Ascendente', 'textdomain'),
-    'parent_item_colon' => __('Categoria Ascendente:', 'textdomain'),
-    'edit_item'         => __('Editar Categoria', 'textdomain'),
-    'update_item'       => __('Atualizar Categoria', 'textdomain'),
-    'add_new_item'      => __('Adicionar Categoria', 'textdomain'),
-    'new_item_name'     => __('Nova Categoria', 'textdomain'),
-    'menu_name'         => __('Categoria', 'textdomain'),
-  );
-
-  $args = array(
-    'hierarchical'      => true,
-    'labels'            => $labels,
-    'show_ui'           => true,
-    'show_admin_column' => true,
-    'query_var'         => true,
-    // 'rewrite'           => array( 'slug' => 'servcategory' ),
-    'show_in_rest'       => true, //to appear in Gutemberg editor
-  );
-
-  register_taxonomy('serv_category', array('ntiservice'), $args);
-
-  unset($args);
-  unset($labels);
-
-  // Add new taxonomy, NOT hierarchical (like tags)
-  $labels = array(
-    'name'                       => _x('Tags dos Serviços', 'taxonomy general name', 'textdomain'),
-    'singular_name'              => _x('Tags', 'taxonomy singular name', 'textdomain'),
-    'search_items'               => __('Buscar tags', 'textdomain'),
-    'popular_items'              => __('Popular tags', 'textdomain'),
-    'all_items'                  => __('Todas tags', 'textdomain'),
-    'parent_item'                => null,
-    'parent_item_colon'          => null,
-    'edit_item'                  => __('Editar tags', 'textdomain'),
-    'update_item'                => __('Atualizar tags', 'textdomain'),
-    'add_new_item'               => __('Adicionar nova tag', 'textdomain'),
-    'new_item_name'              => __('Nome de tags novas', 'textdomain'),
-    'separate_items_with_commas' => __('Separar tags com commas', 'textdomain'),
-    'add_or_remove_items'        => __('Adicionar ou remover tags', 'textdomain'),
-    'choose_from_most_used'      => __('Escolher entre as tags mais usadas', 'textdomain'),
-    'not_found'                  => __('Tags não encontradas.', 'textdomain'),
-    'menu_name'                  => __('Tags', 'textdomain'),
-  );
-
-  $args = array(
-    'hierarchical'          => false,
-    'labels'                => $labels,
-    'show_ui'               => true,
-    'show_admin_column'     => true,
-    'update_count_callback' => '_update_post_term_count',
-    'query_var'             => true,
-    // 'rewrite'               => array( 'slug' => 'writer' ),
-    'show_in_rest'       => true,
-  );
-
-  register_taxonomy('serv_tag', 'ntiservice', $args);
-}
-// hook into the init action and call create_book_taxonomies when it fires
-add_action('init', 'wpdocs_create_ntiservice_taxonomies', 0);
-//fim de post_type ntiservice
-
-// register custom post type to work with------------------------------------------------------
-function event_create_post_type()
-{
-  // set up labels
-  $labels = array(
-    'name' => 'Events',
-    'singular_name' => 'Event',
-    'add_new' => 'Adiona Novo Evento',
-    'add_new_item' => 'Adiciona Novo Evento',
-    'edit_item' => 'Edita Evento',
-    'new_item' => 'Novo Evento',
-    'all_items' => 'Todos Eventos',
-    'view_item' => 'Visualizar Evento',
-    'search_items' => 'Bucar Eventos',
-    'not_found' => 'Nenhum Evento Encontrados',
-    'not_found_in_trash' => 'Nenhum Evento encontrado na lixeira',
-    'parent_item_colon' => '',
-    'menu_name' => 'Eventos',
-  );
-  //register post type
-  register_post_type(
-    'event',
-    array(
-      'labels' => $labels,
-      'has_archive' => true,
-      'public' => true,
-      'supports' => array('title', 'editor', 'excerpt', 'custom-fields', 'thumbnail', 'page-attributes'),
-      'taxonomies' => array('event_category', 'event_tag'),
-      'exclude_from_search' => false,
-      'capability_type' => 'post',
-      'rewrite' => array('slug' => 'events'),
-      'show_ui'           => true,
-      'show_admin_column' => true,
-      'query_var'         => true,
-      'show_in_rest'       => true, //to appear in Gutemberg editor
-    )
-  );
-}
-add_action('init', 'event_create_post_type');
-
-/**
- * Create two taxonomies, serv-category and serv_tag for the post type "ntiservice".
- *
- * @see register_post_type() for registering custom post types.
- */
-function wpdocs_create_event_taxonomies()
-{
-  // Add new taxonomy, make it hierarchical (like categories)
-  $labels = array(
-    'name'              => _x('Categoria de Eventos', 'taxonomy general name', 'textdomain'),
-    'singular_name'     => _x('Categoria', 'taxonomy singular name', 'textdomain'),
-    'search_items'      => __('Buscar Categorias', 'textdomain'),
-    'all_items'         => __('Todas Categorias', 'textdomain'),
-    'parent_item'       => __('Categoria Ascendente', 'textdomain'),
-    'parent_item_colon' => __('Categoria Ascendente:', 'textdomain'),
-    'edit_item'         => __('Editar Categoria', 'textdomain'),
-    'update_item'       => __('Atualizar Categoria', 'textdomain'),
-    'add_new_item'      => __('Adicionar Categoria', 'textdomain'),
-    'new_item_name'     => __('Nova Categoria', 'textdomain'),
-    'menu_name'         => __('Categoria', 'textdomain'),
-  );
-
-  $args = array(
-    'hierarchical'      => true,
-    'labels'            => $labels,
-    'show_ui'           => true,
-    'show_admin_column' => true,
-    'query_var'         => true,
-    'show_in_rest'       => true, //to appear in Gutemberg editor
-  );
-
-  register_taxonomy('event_category', array('event'), $args);
-
-  unset($args);
-  unset($labels);
-
-  // Add new taxonomy, NOT hierarchical (like tags)
-  $labels = array(
-    'name'                       => _x('Tags dos Eventos', 'taxonomy general name', 'textdomain'),
-    'singular_name'              => _x('Tags', 'taxonomy singular name', 'textdomain'),
-    'search_items'               => __('Buscar tags', 'textdomain'),
-    'popular_items'              => __('Popular tags', 'textdomain'),
-    'all_items'                  => __('Todas tags', 'textdomain'),
-    'parent_item'                => null,
-    'parent_item_colon'          => null,
-    'edit_item'                  => __('Editar tags', 'textdomain'),
-    'update_item'                => __('Atualizar tags', 'textdomain'),
-    'add_new_item'               => __('Adicionar nova tag', 'textdomain'),
-    'new_item_name'              => __('Nome de tags novas', 'textdomain'),
-    'separate_items_with_commas' => __('Separar tags com commas', 'textdomain'),
-    'add_or_remove_items'        => __('Adicionar ou remover tags', 'textdomain'),
-    'choose_from_most_used'      => __('Escolher entre as tags mais usadas', 'textdomain'),
-    'not_found'                  => __('Tags não encontradas.', 'textdomain'),
-    'menu_name'                  => __('Tags', 'textdomain'),
-  );
-
-  $args = array(
-    'hierarchical'          => false,
-    'labels'                => $labels,
-    'show_ui'               => true,
-    'show_admin_column'     => true,
-    'update_count_callback' => '_update_post_term_count',
-    'query_var'             => true,
-    // 'rewrite'               => array( 'slug' => 'writer' ),
-    'show_in_rest'       => true,
-  );
-
-  register_taxonomy('event_tag', 'event', $args);
-}
-// hook into the init action and call create_book_taxonomies when it fires
-add_action('init', 'wpdocs_create_event_taxonomies', 0);
-//fim de post_type event
-
-/**
- * Generate breadcrumbs
- */
-function get_breadcrumb()
-{
-  global $post;
-  $post_type = $post->post_type;
-  echo '<ol class="breadcrumb">';
-  if (!is_home()) {
-    echo '<li class="breadcrumb-item"><a href="' . home_url() . '">';
-    echo 'Página Inicial';
-    echo '</a></li>';
-    if (is_category())
-      the_category(' &bull; ');
-    if (is_single()) {
-      if (is_single()) {
-        echo '<li class="breadcrumb-item">' . get_the_title() . '</li>';
+  ?>
+        <div class="bg-light ">
+          <div class="container-fluid ">
+            <div class="title">
+              <h4>Relacionadas</h4>
+            </div>
+            <div class="row justify-content-evenly">
+              <?php
+              while ($get_posts->have_posts()) {
+                $get_posts->the_post();
+                $temp = array();
+                $thumb_id = get_post_thumbnail_id();
+                $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+                $thumb_url = $thumb_url_array[0];
+                $temp['title'] = get_the_title();
+                $temp['excerpt'] = get_the_excerpt();
+                $temp['slug'] = get_permalink();
+                if (has_post_thumbnail()) {
+                  $temp['image'] = $thumb_url;
+                } else {
+                  $temp['image'] = get_template_directory_uri() . "/images/sistemas-institucionais/logo-nti.png";
+                }
+                $avisos[] = $temp;
+              }
+              wp_reset_postdata();
+              if (count($avisos) > 0) {
+                foreach ($avisos as $aviso) {
+                  extract($aviso); ?>
+                  <div class=" card col-md-3 my-2">
+                    <img class="card-img-top m-auto" style="width: 200px; height:200px" src="<?php echo $image ?>" alt="<?php echo esc_attr($title); ?>">
+                    <hr class="p-0 m-0">
+                    <div class="card-body pb-4 mb-4">
+                      <h5 class="card-title"><?php echo $title; ?></h5>
+                      <p class="card-text"><?php echo $excerpt; ?></p>
+                    </div>
+                    <div class="text-right mais">
+                      <a href=<?php echo $slug; ?> class="btn">Acessar aviso</a>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
+          </div>
+        </div><?php
+            endif;
+          endif;
+          return ob_get_clean();
+        }
+        add_shortcode('prefix_related_posts_for_single', 'sc_get_related_posts_for_single');
       }
-    } elseif (is_page()) {
-      echo '<li class="breadcrumb-item">' . get_the_title() . '</li>';
-    } elseif (is_search()) {
-      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
-      echo '"<em>';
-      echo the_search_query();
-      echo '</em>"';
-    }
-  }
-  echo '</ol>';
-}
-// Filter except length to 15 words.
-// tn custom excerpt length
-function tn_custom_excerpt_length($length)
-{
-  return 15;
-}
-add_filter('excerpt_length', 'tn_custom_excerpt_length', 999);
+
+      /**
+       * If the theme doesn't have any single doc handler, load that from
+       * the plugin.
+       *
+       * @param string $template
+       *
+       * @return string
+       */
+      function template_loader($template)
+      {
+        $find = ['single-ntiservice.php'];
+        $file = '';
+
+        if (is_single() && get_post_type() == 'ntiservice') {
+          $file   = 'single-ntiservice.php';
+          $find[] = $file;
+          $find[] = wedocs()->theme_dir_path() . $file;
+        }
+
+        if ($file) {
+          $template = locate_template($find);
+
+          if (!$template) {
+            $template = wedocs()->template_path() . $file;
+          }
+        }
+        return $template;
+      }
+
+      // register custom post type to work with------------------------------------------------------
+      function event_create_post_type()
+      {
+        // set up labels
+        $labels = array(
+          'name' => 'Events',
+          'singular_name' => 'Event',
+          'add_new' => 'Adiona Novo Evento',
+          'add_new_item' => 'Adiciona Novo Evento',
+          'edit_item' => 'Edita Evento',
+          'new_item' => 'Novo Evento',
+          'all_items' => 'Todos Eventos',
+          'view_item' => 'Visualizar Evento',
+          'search_items' => 'Bucar Eventos',
+          'not_found' => 'Nenhum Evento Encontrados',
+          'not_found_in_trash' => 'Nenhum Evento encontrado na lixeira',
+          'parent_item_colon' => '',
+          'menu_name' => 'Eventos',
+        );
+        //register post type
+        register_post_type(
+          'event',
+          array(
+            'labels' => $labels,
+            'has_archive' => true,
+            'public' => true,
+            'supports' => array('title', 'editor', 'excerpt', 'custom-fields', 'thumbnail', 'page-attributes'),
+            'taxonomies' => array('event_category', 'event_tag'),
+            'exclude_from_search' => false,
+            'capability_type' => 'post',
+            'rewrite' => array('slug' => 'events'),
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'show_in_rest'       => true, //to appear in Gutemberg editor
+          )
+        );
+      }
+      add_action('init', 'event_create_post_type');
+
+      /**
+       * Create two taxonomies, serv-category and serv_tag for the post type "ntiservice".
+       *
+       * @see register_post_type() for registering custom post types.
+       */
+      function wpdocs_create_event_taxonomies()
+      {
+        // Add new taxonomy, make it hierarchical (like categories)
+        $labels = array(
+          'name'              => _x('Categoria de Eventos', 'taxonomy general name', 'textdomain'),
+          'singular_name'     => _x('Categoria', 'taxonomy singular name', 'textdomain'),
+          'search_items'      => __('Buscar Categorias', 'textdomain'),
+          'all_items'         => __('Todas Categorias', 'textdomain'),
+          'parent_item'       => __('Categoria Ascendente', 'textdomain'),
+          'parent_item_colon' => __('Categoria Ascendente:', 'textdomain'),
+          'edit_item'         => __('Editar Categoria', 'textdomain'),
+          'update_item'       => __('Atualizar Categoria', 'textdomain'),
+          'add_new_item'      => __('Adicionar Categoria', 'textdomain'),
+          'new_item_name'     => __('Nova Categoria', 'textdomain'),
+          'menu_name'         => __('Categoria', 'textdomain'),
+        );
+
+        $args = array(
+          'hierarchical'      => true,
+          'labels'            => $labels,
+          'show_ui'           => true,
+          'show_admin_column' => true,
+          'query_var'         => true,
+          'show_in_rest'       => true, //to appear in Gutemberg editor
+        );
+
+        register_taxonomy('event_category', array('event'), $args);
+
+        unset($args);
+        unset($labels);
+
+        // Add new taxonomy, NOT hierarchical (like tags)
+        $labels = array(
+          'name'                       => _x('Tags dos Eventos', 'taxonomy general name', 'textdomain'),
+          'singular_name'              => _x('Tags', 'taxonomy singular name', 'textdomain'),
+          'search_items'               => __('Buscar tags', 'textdomain'),
+          'popular_items'              => __('Popular tags', 'textdomain'),
+          'all_items'                  => __('Todas tags', 'textdomain'),
+          'parent_item'                => null,
+          'parent_item_colon'          => null,
+          'edit_item'                  => __('Editar tags', 'textdomain'),
+          'update_item'                => __('Atualizar tags', 'textdomain'),
+          'add_new_item'               => __('Adicionar nova tag', 'textdomain'),
+          'new_item_name'              => __('Nome de tags novas', 'textdomain'),
+          'separate_items_with_commas' => __('Separar tags com commas', 'textdomain'),
+          'add_or_remove_items'        => __('Adicionar ou remover tags', 'textdomain'),
+          'choose_from_most_used'      => __('Escolher entre as tags mais usadas', 'textdomain'),
+          'not_found'                  => __('Tags não encontradas.', 'textdomain'),
+          'menu_name'                  => __('Tags', 'textdomain'),
+        );
+
+        $args = array(
+          'hierarchical'          => false,
+          'labels'                => $labels,
+          'show_ui'               => true,
+          'show_admin_column'     => true,
+          'update_count_callback' => '_update_post_term_count',
+          'query_var'             => true,
+          // 'rewrite'               => array( 'slug' => 'writer' ),
+          'show_in_rest'       => true,
+        );
+
+        register_taxonomy('event_tag', 'event', $args);
+      }
+      // hook into the init action and call create_book_taxonomies when it fires
+      add_action('init', 'wpdocs_create_event_taxonomies', 0);
+      //fim de post_type event
+
+      /**
+       * Generate breadcrumbs
+       */
+      function get_breadcrumb()
+      {
+        global $post;
+        $post_type = $post->post_type;
+        echo '<ol class="breadcrumb">';
+        if (!is_home()) {
+          echo '<li class="breadcrumb-item"><a href="' . home_url() . '">';
+          echo 'Página Inicial';
+          echo '</a></li>';
+          if (is_category())
+            the_category(' &bull; ');
+          if (is_single()) {
+            if (is_single()) {
+              echo '<li class="breadcrumb-item">' . get_the_title() . '</li>';
+            }
+          } elseif (is_page()) {
+            echo '<li class="breadcrumb-item">' . get_the_title() . '</li>';
+          } elseif (is_search()) {
+            echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+            echo '"<em>';
+            echo the_search_query();
+            echo '</em>"';
+          }
+        }
+        echo '</ol>';
+      }
+      // Filter except length to 15 words.
+      // tn custom excerpt length
+      function tn_custom_excerpt_length($length)
+      {
+        return 15;
+      }
+      add_filter('excerpt_length', 'tn_custom_excerpt_length', 999);

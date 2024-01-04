@@ -23,7 +23,6 @@
             </div>
           </div>
         </div>
-        <div> <?php echo do_shortcode('[prefix_related_posts_for_single] ') ?></div>
     </main>
   </div>
 </div>

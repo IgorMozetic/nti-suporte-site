@@ -1,13 +1,13 @@
 <?php
 // Register Custom Post Type
-function custom_post_type_avisos()
+function custom_post_type_ntiservice()
 {
 
   $labels = array(
-    'name'                  => _x('Avisos', 'Avisos', 'text_domain'),
-    'singular_name'         => _x('Avisos', 'Avisos', 'text_domain'),
-    'menu_name'             => __('Avisos', 'text_domain'),
-    'name_admin_bar'        => __('Avisos', 'text_domain'),
+    'name'                  => _x('Ntiservices', 'Ntiservices', 'text_domain'),
+    'singular_name'         => _x('Ntiservice', 'Ntiservice', 'text_domain'),
+    'menu_name'             => __('Ntiservices', 'text_domain'),
+    'name_admin_bar'        => __('Ntiservices', 'text_domain'),
     'archives'              => __('Arquivos do item', 'text_domain'),
     'attributes'            => __('Atributos do item', 'text_domain'),
     'parent_item_colon'     => __('Parent Item:', 'text_domain'),
@@ -33,8 +33,8 @@ function custom_post_type_avisos()
     'filter_items_list'     => __('Filter items list', 'text_domain'),
   );
   $args = array(
-    'label'                 => __('Avisos', 'text_domain'),
-    'description'           => __('Este tipo de post é destinado para o avisos', 'text_domain'),
+    'label'                 => __('Ntiservices', 'text_domain'),
+    'description'           => __('Este tipo de post é destinado para o Ntiservices', 'text_domain'),
     'labels'                => $labels,
     'supports'              => array('title', 'editor', 'excerpt', 'thumbnail'),
     'taxonomies'            => array('category', 'post_tag'),
@@ -43,7 +43,7 @@ function custom_post_type_avisos()
     'show_ui'               => true,
     'show_in_menu'          => true,
     'menu_position'         => 6,
-    'menu_icon'             => 'dashicons-warning',
+    'menu_icon'             => 'dashicons-hammer',
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
     'can_export'            => true,
@@ -52,6 +52,6 @@ function custom_post_type_avisos()
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
   );
-  register_post_type('avisos', $args);
+  register_post_type('ntiservice', $args);
 }
-add_action('init', 'custom_post_type_avisos', 0);
+add_action('init', 'custom_post_type_ntiservice', 0);
