@@ -15,11 +15,11 @@ get_header(); ?>
           <div class="box-2-igovti pt-2 pb-4 d-flex flex-column justify-content-center align-items-center">
             <div class="py-3">
               <h4 class="text-center">Resultado da avaliação da UFABC no ciclo de 2016:</h4>
-              <figure class="size-full"><img decoding="async" src="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2016.jpg" alt="" class="wp-image-4449" srcset="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2016.jpg 649w, https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2016-300x152.jpg 300w" sizes="(max-width: 649px) 100vw, 649px"></figure>
+              <figure class="size-full"><img decoding="async" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/05/igov_2016.jpg" alt="" class="wp-image-4449" sizes="(max-width: 649px) 100vw, 649px"></figure>
             </div>
             <div class="pt-3">
               <h4 class="text-center">Resultado da avaliação da UFABC no ciclo de 2014:</h4>
-              <figure class="size-full"><img decoding="async" loading="lazy" src="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014.jpg" alt="" class="wp-image-4450" srcset="https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014.jpg 649w, https://nti.ufabc.edu.br/wp-content/uploads/2023/05/igov_2014-300x152.jpg 300w" sizes="(max-width: 649px) 100vw, 649px"></figure>
+              <figure class="size-full"><img decoding="async" loading="lazy" src="http://localhost/wordpress-site/novo/wp-content/uploads/2023/12/uploads/2023/05/igov_2014.jpg" alt="" class="wp-image-4450" sizes="(max-width: 649px) 100vw, 649px"></figure>
             </div>
             <p><small>Conheça os dados completos da UFABC no <a href="<?php echo site_url() . '/wp-content/uploads/2023/12/uploads/2023/05/iGovTI2016.pdf' ?>" target="_blank" rel="noreferrer noopener">Perfil GovTI2016</a>.</small></p>
           </div>

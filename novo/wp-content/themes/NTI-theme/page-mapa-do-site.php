@@ -5,36 +5,27 @@ get_header(); ?>
     <div>
       <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
       <h1 class="title">Mapa do Site</h1>
-      <!--Grid row-->
       <div class="row">
-
-        <!-- WordPress Custom Post Type Loop - Delete this section if you are not using Custom Post Types -->
-        <!--Grid column-->
         <div class="col-lg-3 col-md-6">
-
-          <!--Card-->
           <div class="card mt-5 posts">
-
             <div>
-              <!--Card title-->
               <div class="card mb-2 ">
                 <div class="title-divider">
                   <h3 class="text-center mb-0"> <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     Avisos</h3>
                 </div>
               </div>
-              <!--list content-->
               <div class="card-body pt-0">
                 <ul class="list-group">
-
                   <?php
                   $wppages = new WP_Query(
                     array(
-                      'post_type' => 'event', // slug of pages
-                      'posts_per_page' => -1, // -1 shows all pages
-                      'post_status' => 'publish', // only shows published pages
-                      'orderby' => 'title', // orders by page title
-                      'order' => 'ASC' // orders page title alphabetically
+                      'post_type' => 'avisos',
+                      'posts_per_page' => -1,
+                      'post_status' => 'publish',
+                      'tag' => 'avisos',
+                      'orderby' => 'title',
+                      'order' => 'ASC'
                     )
                   );
                   ?>
@@ -66,8 +57,7 @@ get_header(); ?>
               <!--Card title-->
               <div class="card mb-2 ">
                 <div class="title-divider">
-                  <h3 class="text-center mb-0"> <i class="fa fa-files-o" aria-hidden="true"></i>
-                    Manuais e Tutoriais</h3>
+                  <h3 class="text-center mb-0"><i class="bi bi-files"></i> Manuais e Tutoriais</h3>
                 </div>
               </div>
               <!--card content-->
@@ -116,8 +106,7 @@ get_header(); ?>
               <!--Card title-->
               <div class="card mb-2">
                 <div class="title-divider">
-
-                  <h3 class="text-center mb-0"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Notícias</h3>
+                  <h3 class="text-center mb-0"><i class="fa-regular fa-newspaper"></i> Notícias</h3>
                 </div>
               </div> <!--/Card title-->
               <!--Card content-->
@@ -127,11 +116,12 @@ get_header(); ?>
                   <?php
                   $wpposts = new WP_Query(
                     array(
-                      'post_type' => 'post', // slug of posts
-                      'posts_per_page' => -1, // -1 shows all posts
-                      'post_status' => 'publish', // only shows published posts
-                      'orderby' => 'title', // orders by post title
-                      'order' => 'ASC' // orders post title alphabetically
+                      'post_type' => 'avisos',
+                      'posts_per_page' => -1,
+                      'post_status' => 'publish',
+                      'tag' => 'slide',
+                      'orderby' => 'title',
+                      'order' => 'ASC'
                     )
                   );
                   ?>
