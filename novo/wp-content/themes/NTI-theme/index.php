@@ -29,7 +29,8 @@ use function PHPSTORM_META\type; ?>
           $loop = new WP_Query(
             array(
               'post_type' => 'avisos',
-              'posts_per_page' => 4,
+              'tag' => 'avisos',
+              'posts_per_page' => 3,
             ),
           );
           ?>
@@ -77,7 +78,7 @@ use function PHPSTORM_META\type; ?>
             <div class="card h-100">
             <?php
             echo '<div class="title-divider  acessados-divider">
-                            <h3><i class="fa fa-files-o" aria-hidden="true"></i> Mais acessados </h3></div>';
+                            <h3><i class="bi bi-files"></i> Mais acessados </h3></div>';
             echo '<div class="pb-4">';
             echo '<ul class="list-group pb-3">';
             while ($loop->have_posts()) {
@@ -111,7 +112,7 @@ use function PHPSTORM_META\type; ?>
             <div class="card h-100">
               <?php
               echo '<div class="title-divider faq-divider">
-                      <h3><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ</h3> </div>';
+                      <h3><i class="fa-regular fa-circle-question"></i> FAQ</h3> </div>';
               echo '<div class="pb-4">';
               echo '<ul class="list-group pb-3">';
               while ($loop->have_posts()) {
@@ -138,12 +139,12 @@ use function PHPSTORM_META\type; ?>
         <div class="col-sm-12 col-md-3 mb-3">
           <div class="card h-100">
             <div class="title-divider proc-divider">
-              <h3><i class="fa fa-briefcase" aria-hidden="true"></i> Processos</h3>
+              <h3><i class="fa-solid fa-briefcase"></i> Processos</h3>
             </div>
             <div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <a class="link-card-list" href="https://processos.ufabc.edu.br/cafe-com-processos"><i class="fa fa-file-text-o" aria-hidden="true"></i> Portifólio de Processos do NTI</a>
+                  <a class="link-card-list" href="https://processos.ufabc.edu.br/cafe-com-processos"><i class="fa-regular fa-file-lines"></i> Portifólio de Processos do NTI</a>
                 </li>
                 <li class="list-group-item">
                   <a class="link-card-list" href="https://processos.ufabc.edu.br"> <i class="fa fa-external-link" aria-hidden="true"></i> Gestão de Processos UFABC</a>
