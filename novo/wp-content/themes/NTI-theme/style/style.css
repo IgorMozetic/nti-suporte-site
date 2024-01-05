@@ -607,6 +607,10 @@ ol.carousel-indicators li {
   right: 0px;
 }
 
+.betterdocs-search-form-wrapper {
+  border: none !important;
+}
+
 @media (max-width: 992px) {
   .betterdocs-wrapper.betterdocs-docs-archive-wrapper
     .betterdocs-category-grid-wrapper

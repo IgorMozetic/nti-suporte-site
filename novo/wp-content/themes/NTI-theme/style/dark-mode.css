@@ -123,14 +123,15 @@
   color: #fff;
 }
 
-[data-theme="dark"] .list-group-item:not(.active) {
+[data-theme="dark"] .card .list-group-item:not(.active) {
   background-color: #303030 !important;
-  border: 1px solid #444;
+  border: 1px solid #303030 !important;
 }
 
-[data-theme="dark"] .card {
+[data-theme="dark"] .card,
+[data-theme="dark"] .betterdocs-body,
+[data-theme="dark"] .betterdocs-footer {
   background-color: #303030 !important;
-  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 [data-theme="dark"] .card-title a {
@@ -237,7 +238,8 @@
   background-color: #515050;
 }
 
-[data-theme="dark"] .contratos table tr:last-child {
+[data-theme="dark"] .contratos table tr:last-child,
+[data-theme="dark"] .betterdocs tr:last-child {
   background-color: #111;
 }
 
@@ -251,8 +253,10 @@
 [data-theme="dark"] .docs-single-cat-wrap,
 [data-theme="dark"] .betterdocs-categories-wrap.white-bg,
 [data-theme="dark"] .docs-single-cat-wrap,
-[data-theme="dark"] .betterdocs-toc {
-  background-color: #303030 !important ;
+[data-theme="dark"] .betterdocs-toc,
+[data-theme="dark"] .betterdocs-wrapper,
+[data-theme="dark"] .betterdocs-content-wrapper {
+  background-color: #111 !important ;
 }
 [data-theme="dark"] .docs-cat-title-wrap,
 [data-theme="dark"] .betterdocs-search-form-wrap,
@@ -268,7 +272,7 @@
   .betterdocs-content-area,
 [data-theme="dark"] .betterdocs-single-bg,
 [data-theme="dark"] .betterdocs-content-full {
-  background-color: #444 !important;
+  background-color: #111 !important ;
 }
 
 [data-theme="dark"] .betterdocs-content {
@@ -276,11 +280,43 @@
   border-bottom: none;
 }
 
+[data-theme="dark"] .betterdocs-searchform {
+  border: 1px solid #9f9f9f;
+}
+
+[data-theme="dark"] .betterdocs-body li svg,
+[data-theme="dark"] .betterdocs-body li a {
+  color: #6c757d !important;
+  fill: #6c757d !important;
+}
+
+[data-theme="dark"] .betterdocs-toc span,
+[data-theme="dark"] .betterdocs-toc a,
+[data-theme="dark"] .betterdocs-toc .toc-list li a:before,
+[data-theme="dark"] .docs-search-result span,
+[data-theme="dark"] .docs-search-result a {
+  color: white !important;
+}
+
 [data-theme="dark"] .menu,
 [data-theme="dark"] .menu-header,
 [data-theme="dark"] .menu li:hover > .sub-menu {
   background: #303030;
 }
-[data-theme="dark"] .title-divider {
-  background: #414141;
+
+[data-theme="dark"] .title-divider,
+[data-theme="dark"] .betterdocs-category-header,
+[data-theme="dark"] .betterdocs-content-inner-area,
+[data-theme="dark"] .betterdocs-article-reactions,
+[data-theme="dark"] .betterdocs-toc,
+[data-theme="dark"] .docs-search-result {
+  background: #414141 !important;
+}
+
+[data-theme="dark"] .betterdocs-search-result-wrap ul li:hover {
+  background: #505050 !important;
+}
+
+[data-theme="dark"] .wp-block-table.is-style-stripes {
+  border-bottom: 1px solid #111 !important;
 }
