@@ -1,6 +1,6 @@
 <?php
 
-include("header.php");
+get_header();
 
 
 use ElementorPro\Modules\Woocommerce\Conditions\Docs_Page;
@@ -10,9 +10,8 @@ use function PHPSTORM_META\type; ?>
 
 <main id="content" class="home">
   <div class="container">
-    <div class="row">
-      <!-- slider -->
-      <?php get_template_part('parts/slider'); ?>
+    <div class="row pt-3">
+      <?php include('includes/slider-home.php'); ?>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 my-3">
@@ -161,16 +160,16 @@ use function PHPSTORM_META\type; ?>
             <div class="h-100">
               <div class="sistemasinstitucionais w-100 h-100 align-items-center justify-content-evenly pb-4">
                 <div class="m-auto">
-                  <a href="http://acesso.ufabc.edu.br/site/login"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/acesso.png" alt=""></a>
+                  <a href="http://acesso.ufabc.edu.br/site/login"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/acesso.png" alt=""></a>
                 </div>
                 <div class="m-auto">
-                  <a href="https://moodle.ufabc.edu.br/"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/moodle.png" alt=""></a>
+                  <a href="https://moodle.ufabc.edu.br/"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/moodle.png" alt=""></a>
                 </div>
                 <div class="m-auto">
-                  <a href="http://sig.ufabc.edu.br/sigaa"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigaa.png" alt=""></a>
+                  <a href="http://sig.ufabc.edu.br/sigaa"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sigaa.png" alt=""></a>
                 </div>
                 <div class="m-auto">
-                  <a href="http://sig.ufabc.edu.br/sigrh"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigrh.png" alt=""></a>
+                  <a href="http://sig.ufabc.edu.br/sigrh"><img class="sistemasinstitucionaisimg" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sigrh.png" alt=""></a>
                 </div>
               </div>
               <a class="text-right mais" href="<?php echo site_url() . '/sistemas-institucionais' ?>">
