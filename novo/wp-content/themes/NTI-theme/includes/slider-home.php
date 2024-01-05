@@ -1,6 +1,11 @@
 <?php
 $slides = array();
-$args = array('tag' => 'slide', 'nopaging' => true, 'posts_per_page' => 5);
+$args = array(
+  'post_type' => 'avisos',
+  'tag' => 'slide',
+  'nopaging' => true,
+  'posts_per_page' => 5
+);
 
 $slider_query = new WP_Query($args);
 if ($slider_query->have_posts()) {
@@ -25,11 +30,11 @@ wp_reset_postdata();
 <?php if (count($slides) > 0) { ?>
 
   <div class="container-fluid">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
       <ol class="carousel-indicators">
         <?php for ($i = 0; $i < count($slides); $i++) { ?>
-          <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" <?php } ?>></li>
+          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" <?php } ?>></li>
         <?php } ?>
       </ol>
 

@@ -438,6 +438,92 @@ img {
   object-fit: cover;
 }
 
+/* SLIDER - HOME */
+
+/* carousel do topo da Home page ----------------------------------------------------------------------- */
+.link_slide {
+  color: #ffffff !important;
+  transition: opacity 0.15s ease;
+}
+
+.img-slider {
+  min-height: 200px;
+  max-height: 200px !important;
+}
+
+.carousel-item .row .col-md-6 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 3%;
+  background-color: #ffffff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #59aa55 !important;
+}
+
+.slider-transparent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #555;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.slider-transparent:hover {
+  background: none;
+  opacity: 1;
+}
+
+ol.carousel-indicators {
+  position: absolute !important;
+  right: 0px !important;
+  top: 180px !important;
+  z-index: 15 !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  margin-right: 0% !important;
+  margin-left: 0% !important;
+  list-style: none;
+}
+
+ol.carousel-indicators li {
+  display: block !important;
+  float: left !important;
+  text-indent: initial !important;
+  background: none !important;
+  box-sizing: content-box !important;
+  flex: 0 1 auto !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin-right: 3px !important;
+  margin-left: 3px !important;
+  text-indent: -999px !important;
+  cursor: pointer !important;
+  background-color: #333333 !important;
+  background-clip: padding-box !important;
+  border-radius: 50% !important;
+  border: 2px solid #fff !important;
+  /* opacity: 0.5 !important; */
+  transition: opacity 0.6s ease !important;
+}
+
+/* FOOTER */
+#footer-brasil {
+  background: none repeat scroll 0% 0% #00420c;
+}
+
 /* BETTERDOCS */
 .docs-cat-title-inner {
   border-color: #28a745 !important;
