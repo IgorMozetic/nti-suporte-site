@@ -1,0 +1,286 @@
+/*!
+ * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
+ * Copyright 2021 C.Oliff
+ * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
+ */
+
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #fff !important;
+}
+
+[data-theme="dark"] .bg-secondary {
+  background-color: #444 !important;
+}
+
+[data-theme="dark"] a.bg-secondary:hover,
+[data-theme="dark"] a.bg-secondary:focus,
+[data-theme="dark"] button.bg-secondary:hover,
+[data-theme="dark"] button.bg-secondary:focus {
+  background-color: #2b2a2a !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #111 !important;
+}
+
+[data-theme="dark"] a.bg-light:hover,
+[data-theme="dark"] a.bg-light:focus,
+[data-theme="dark"] button.bg-light:hover,
+[data-theme="dark"] button.bg-light:focus {
+  background-color: #807f7f !important;
+}
+
+[data-theme="dark"] .bg-dark {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] a.bg-dark:hover,
+[data-theme="dark"] a.bg-dark:focus,
+[data-theme="dark"] button.bg-dark:hover,
+[data-theme="dark"] button.bg-dark:focus {
+  background-color: #171616 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #fff !important;
+}
+
+[data-theme="dark"] .jumbotron {
+  background-color: #303030 !important;
+}
+
+[data-theme="dark"] a {
+  color: #008712;
+}
+
+[data-theme="dark"] #barra-brasil a,
+[data-theme="dark"] #portal-siteactions a {
+  color: #fff !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] i {
+  color: #fff !important;
+}
+
+[data-theme="dark"] hr {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .text-right i {
+  color: #008712 !important;
+}
+
+[data-theme="dark"] .div-image-sistemas {
+  margin: 0.5rem 0;
+}
+
+[data-theme="dark"] .b-header,
+[data-theme="dark"] #footer-brasil,
+[data-theme="dark"] .footer-copyright {
+  background: linear-gradient(to bottom, #333 0, black 100%);
+  border-bottom: 1px solid #333;
+}
+
+[data-theme="dark"] .h-nav,
+[data-theme="dark"] .footer-copyright {
+  background: black !important;
+}
+
+[data-theme="dark"] .b-footer {
+  background-color: #303030 !important;
+}
+
+[data-theme="dark"] #barra-brasil {
+  background: #444 !important;
+  border: 1px solid #303030;
+}
+
+[data-theme="dark"] #barra-brasil li,
+[data-theme="dark"] #barra-brasil .brasil-flag,
+[data-theme="dark"] #barra-brasil .list .first {
+  border: 1px solid #303030;
+}
+
+[data-theme="dark"] #accessibility a span {
+  color: #ffd200;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .bg-warning {
+  background-color: transparent !important;
+  color: #fff;
+}
+
+[data-theme="dark"] .list-group-item:not(.active) {
+  background-color: #303030 !important;
+  border: 1px solid #444;
+}
+
+[data-theme="dark"] .card {
+  background-color: #303030 !important;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+[data-theme="dark"] .card-title a {
+  color: white !important;
+}
+
+[data-theme="dark"] .card-header {
+  background-color: #444;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+[data-theme="dark"] .card-footer {
+  background-color: #444;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: #303030;
+  border: 1px solid #444;
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom: 1px solid #444;
+}
+
+[data-theme="dark"] .modal-footer {
+  border-top: 1px solid #444;
+}
+
+[data-theme="dark"] .breadcrumb {
+  background-color: #444;
+}
+
+[data-theme="dark"] .breadcrumb a {
+  color: #fff;
+}
+
+[data-theme="dark"] .nav {
+  color: #333;
+  background-color: #111;
+}
+
+[data-theme="dark"] .tab-content {
+  background-color: #222;
+}
+
+[data-theme="dark"] .search_field {
+  background: #333;
+}
+
+[data-theme="dark"] .search_field::placeholder {
+  color: #fff;
+}
+
+[data-theme="dark"] .nav-tabs {
+  border-bottom: 1px solid #333;
+  background-color: #333;
+}
+
+[data-theme="dark"] .nav-tabs a {
+  color: #fff;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link:hover,
+[data-theme="dark"] .nav-tabs .nav-link:focus {
+  border-color: #444 #444 transparent;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active,
+[data-theme="dark"] .nav-tabs .nav-item.show .nav-link {
+  color: #fff;
+  background-color: #222;
+  border-color: #444 #444 transparent;
+}
+
+[data-theme="dark"] .nav-pills .nav-link.active,
+[data-theme="dark"] .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #375a7f;
+}
+
+[data-theme="dark"] .dropdown-menu {
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #444;
+}
+
+[data-theme="dark"] .dropdown-menu a:hover {
+  color: #333;
+}
+
+/* TABLES GOVERNANÇA */
+[data-theme="dark"] table {
+  background-color: #252525;
+  color: white;
+}
+
+[data-theme="dark"] table tr:nth-of-type(2n) {
+  background-color: #111;
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table tr:last-child {
+  background-color: #515050;
+}
+
+[data-theme="dark"] .contratos table tr:last-child {
+  background-color: #111;
+}
+
+[data-theme="dark"] .betterdocs-categories-wrap,
+[data-theme="dark"] .single-kb,
+[data-theme="dark"] .docs-item-container,
+[data-theme="dark"] .betterdocs-category-list,
+[data-theme="dark"] .betterdocs-categories-wrap,
+[data-theme="dark"] .docs-single-cat-wrap,
+[data-theme="dark"] .betterdocs-category-box.white-bg,
+[data-theme="dark"] .docs-single-cat-wrap,
+[data-theme="dark"] .betterdocs-categories-wrap.white-bg,
+[data-theme="dark"] .docs-single-cat-wrap,
+[data-theme="dark"] .betterdocs-toc {
+  background-color: #303030 !important ;
+}
+[data-theme="dark"] .docs-cat-title-wrap,
+[data-theme="dark"] .betterdocs-search-form-wrap,
+[data-theme="dark"] .betterdocs-sidebar-content.betterdocs-category-sidebar,
+[data-theme="dark"] .docs-single-cat-wrap,
+[data-theme="dark"] .docs-cat-title-wrap,
+[data-theme="dark"] .betterdocs-category-wraper.betterdocs-single-wraper,
+[data-theme="dark"] .docs-listing-main,
+[data-theme="dark"] .docs-category-listing,
+[data-theme="dark"]
+  .betterdocs-single-bg
+  [data-theme="dark"]
+  .betterdocs-content-area,
+[data-theme="dark"] .betterdocs-single-bg,
+[data-theme="dark"] .betterdocs-content-full {
+  background-color: #444 !important;
+}
+
+[data-theme="dark"] .betterdocs-content {
+  color: #fff !important;
+  border-bottom: none;
+}
+
+[data-theme="dark"] .menu,
+[data-theme="dark"] .menu-header,
+[data-theme="dark"] .menu li:hover > .sub-menu {
+  background: #303030;
+}
+[data-theme="dark"] .title-divider {
+  background: #414141;
+}

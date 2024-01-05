@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/header.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/footer.css' ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/style.css' ?>">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/dark-mode.css' ?>">
 
   <?php wp_meta(); ?>
   <?php wp_head(); ?>
@@ -56,7 +57,7 @@
 
     <div class="b-header">
       <div class="container">
-        <div class="row">
+        <div class="row w-100">
           <div class="col-12 col-md-2 site-logo">
             <a href="<?php echo home_url() ?>">
               <img class="img-fluid" alt="Núcleo de Tecnologia da Informação - NTI / UFABC" src="<?php echo get_template_directory_uri(); ?>/images/logo_nti_branco.png" />
@@ -70,14 +71,21 @@
                   <ul class="list-group list-group-horizontal float-end text-uppercase" id="portal-siteactions">
 
                     <li class="list-inline-item">
-                      <input type="checkbox" class="btn-check invisible" id="darkSwitch"><label for="darkSwitch"><a accesskey="6">Alto Contraste</a></label>
+                      <input type="checkbox" class="form-check-input btn-check invisible" id="darkSwitch">
+                      <label class="custom-control-label" for="darkSwitch"><a accesskey="6">Alto Contraste</a></label>
                     </li>
-                    <li class="current list-inline-item"><a accesskey="6" href="<?php $url = esc_url(home_url('/'));
-                                                                                echo $url . "/?page_id=685"; ?>">Acessibilidade</a></li>
-                    <li class="list-inline-item"><a accesskey="7" href="<?php $url = esc_url(home_url('/'));
-                                                                        echo $url . "/?page_id=690"; ?>">Mapa do site</a></li>
-                    <li class="list-inline-item float-end mr-0"><a class=" d-flex pt-2 w-75" href="http://ufabc.edu.br/en/" accesskey="8"><img alt="Language" src="<?php echo get_template_directory_uri(); ?>/images/flag-en.png" /></a></li>
-                    <li class="list-inline-item language"><a class="  " href="http://ufabc.edu.br/en/" accesskey="8">EN</a></li>
+                    <li class="current list-inline-item">
+                      <a accesskey="6" href="<?php echo site_url() . '/acessibilidade' ?>">Acessibilidade</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a accesskey="7" href="<?php echo site_url() . '/mapa-do-site' ?>">Mapa do site</a>
+                    </li>
+                    <li class="list-inline-item float-end mr-0">
+                      <a class=" d-flex pt-2 w-75" href="http://ufabc.edu.br/en/" accesskey="8"><img alt="Language" src="<?php echo get_template_directory_uri(); ?>/images/flag-en.png" /></a>
+                    </li>
+                    <li class="list-inline-item language">
+                      <a href="http://ufabc.edu.br/en/" accesskey="8">EN</a>
+                    </li>
                   </ul>
                 </div>
               </div>
