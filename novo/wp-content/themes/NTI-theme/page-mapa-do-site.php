@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 <section class="p-2">
-  <div class="container-fluid pb-3">
+  <div class="container pb-3 mapa-do-site">
     <div>
       <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
       <h1 class="title">Mapa do Site</h1>

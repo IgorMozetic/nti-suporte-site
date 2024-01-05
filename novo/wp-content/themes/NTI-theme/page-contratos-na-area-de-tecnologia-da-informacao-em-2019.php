@@ -3,7 +3,7 @@ get_header(); ?>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/contratos-2019.css' ?>">
 <div id="content" class="wrap">
   <div id="primary" class="content-area">
-    <main id="main" class="container">
+    <main id="main" class="container contratos">
       <div class="row">
         <div class="col-sm-12 col-md-12">
           <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
