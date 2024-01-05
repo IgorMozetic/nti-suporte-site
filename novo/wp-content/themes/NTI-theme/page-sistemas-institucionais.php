@@ -11,7 +11,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/acesso.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/acesso.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -26,7 +26,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/moodle.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/moodle.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -41,7 +41,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/tidia.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/tidia.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -55,9 +55,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/atributos-docente.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/atributos-docente.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -72,7 +71,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-nti.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-nti.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -86,9 +85,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/central.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/central.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -103,7 +101,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/limesurvey.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/limesurvey.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -117,9 +115,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-nti.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-nti.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -133,9 +130,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/g-suite.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/g-suite.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -150,7 +146,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/levantamento-ufabc.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/levantamento-ufabc.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -164,9 +160,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/portal-aluno-graduacao.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/portal-aluno-graduacao.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -181,7 +176,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-nti.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-nti.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -195,9 +190,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sie.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sie.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -212,7 +206,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigaa.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sigaa.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -226,9 +220,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sigrh.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sigrh.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -243,7 +236,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-nti.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-nti.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -257,9 +250,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sistema-alocacao.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sistema-alocacao.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -273,9 +265,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-nti.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-nti.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -290,7 +281,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/aval-prograd.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/aval-prograd.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -304,9 +295,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sistema-inscricao.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sistema-inscricao.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -320,9 +310,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/matriculas-graduacao.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/matriculas-graduacao.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -337,7 +326,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/wekan.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/wekan.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -351,9 +340,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/redmine.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/redmine.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -368,7 +356,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-biblioteca.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-biblioteca.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -383,7 +371,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-ufabc.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-ufabc.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -398,9 +386,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/sig-eleicao.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/sig-eleicao.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -415,7 +402,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/logo-ufabc.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/logo-ufabc.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -429,9 +416,8 @@ get_header(); ?>
             </div>
             <div class="col-md-4 py-2">
               <div class="card h-100">
-                <hr class="m-0">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais/webmail.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/webmail.png" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
