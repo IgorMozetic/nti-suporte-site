@@ -145,7 +145,7 @@ class WriteWithAI extends Base {
                 return `<div class="warning-message">
                     <span class="dashicons dashicons-warning"></span>
                     <div class="footer-message">
-                        ${message} <a href="#">Learn More</a>
+                        ${message}
                     </div>
                 </div>`;
             }
@@ -183,6 +183,7 @@ class WriteWithAI extends Base {
                     }
 
                     docGenerateBtnTxt.innerHTML = "<?php echo esc_html__('Generating...', 'betterdocs'); ?>";
+                    jQuery('.generate-btn').prop('disabled', true);
 
                     jQuery.post({
                         url: ajaxurl, // Make sure ajaxurl is defined in your script
@@ -203,6 +204,8 @@ class WriteWithAI extends Base {
                                 setTimeout(() => {
                                     insertContentToEditor(title, response.data, isOverwrite, keywords);
                                     docGenerateBtnTxt.innerHTML = reGenerateDocLabel;
+                                    jQuery('.generate-btn').removeAttr('disabled');
+
                                     // console.log(jQuery('.betterdocs-ai-autowrite-form-container').data('new-doc-page'));
 
                                     // if(jQuery('.betterdocs-ai-autowrite-form-container')?.data('new-doc-page')) {
@@ -214,6 +217,8 @@ class WriteWithAI extends Base {
                                 jQuery('#betterdocs-ai-error-message').parent().removeClass('hidden');
                                 jQuery('#betterdocs-ai-error-message').html(responseMessage(response.data.message));
                                 docGenerateBtnTxt.innerHTML = generateDocLabel;
+                                jQuery('.generate-btn').removeAttr('disabled');
+
                             }
                         },
                         error: function(error) {
@@ -226,41 +231,25 @@ class WriteWithAI extends Base {
 
             // Function to update the textarea
             function updateTextarea() {
-
                 const title = document.getElementById('betterdocs-ai-title').value;
-                const keywords = document.getElementById('betterdocs-ai-keyword').value; //.split(', ').map(item => `'${item}'`).join(', ');
+                const keywords = document.getElementById('betterdocs-ai-keyword').value;
                 const sectionOptions = document.getElementById('bd-autowrtite-content-section');
-                let language = 'English'; //document.getElementById('betterdocs-ai-language').value;
+                let language = 'English';
 
                 if (language === '') {
                     language = 'English';
                 }
 
-                // const numOfSections = sectionOptions.options[sectionOptions.selectedIndex].value;
+                let keywordsText = keywords !== '' ? ` and incorporate the keywords: ${keywords}` : '';
 
-                let keywordsText = ` and incorporate the keywords: ${keywords}`;
-                if (keywords == '') {
-                    keywordsText = '';
-                }
-
-                // const paragraphOptions = document.getElementById('bd-autowrtite-content-paragraph');
-                // const numOfParagraphs = paragraphOptions.options[paragraphOptions.selectedIndex].value;
                 const contentTextArea = document.getElementById('betterdocs-ai-content');
 
                 if (!jQuery('#betterdocs-ai-error-message').parent().hasClass('hidden')) {
                     jQuery('#betterdocs-ai-error-message').parent().addClass('hidden');
                 }
 
-                // contentTextArea.value = `Make a knowledge base article with html heading tags about [${title}] in [${language}]. Here is some topic to describe the article: [${keywords}]. and wrap the content with p tag also add a span tag with a class named 'highlight' to all the heading and topic tags in the article.`;
-
-                contentTextArea.value = `Create a details knowledge base article in ${language} about [${title}] with html heading tags. Here is some topic to describe the article: [${keywords}]. And wrap the content with p tag also add a span tag with a class named 'highlight' to all the heading and topic tags in the article.`;
-
                 contentTextArea.value = `Generate a documentation using HTML heading tags for '${title}'. Include relevant details on ${keywords} in the documentation. Ensure all content is enclosed with <p> tags and apply a <span> tag with the class 'highlight' to headings and topic tags for emphasis.`;
-
-                // contentTextArea.value = `Create a knowledge base article with HTML heading tags on the topic of '${title}' in ${language}. Here are some topics to describe in the article: ${keywords}. Wrap the content with 'p' tags and also add a 'span' tag with a class named 'highlight' to all the heading and topic tags in the article.`;
-
             }
-
 
             function convertMarkdownToHTML(markdownContent) {
                 // Simple Markdown to HTML conversion (you may need to enhance this based on your needs)
@@ -314,7 +303,6 @@ class WriteWithAI extends Base {
                 htmlContent = wrapwithHeighlight(htmlContent, keywords);
                 const isPostContent = `<?php echo isset($_GET['post']) ? get_the_content($_GET['post']) : ''; ?>`;
 
-                console.log(htmlContent);
 
                 const blocks = wp.blocks.rawHandler({
                     HTML: htmlContent
@@ -324,15 +312,12 @@ class WriteWithAI extends Base {
                     title: title,
                 });
 
-                console.log(htmlContent);
 
                 const selectedBlockClientId = select('core/block-editor').getSelectedBlockClientId();
 
-                console.log(isOverwrite, blocks);
 
                 const allBlocks = select('core/block-editor').getBlocks();
 
-                console.log(allBlocks.length);
 
                 if (isOverwrite || isPostContent === '') {
 
@@ -360,19 +345,33 @@ class WriteWithAI extends Base {
 
             document.addEventListener('DOMContentLoaded', function() {
 
-                // Subscribe to changes in the editor state
+            // Subscribe to changes in the editor state
+                let previousDocsTitle = ''; 
+
                 wp.data.subscribe(() => {
                     // Get the updated post title
-                    docsTitle = wp.data.select('core/editor').getEditedPostAttribute('title');
-                    let currentKeywords = jQuery('#betterdocs-ai-keyword').val();
-                    if (!currentKeywords) {
-                        currentKeywords = '{Documentation Keywords}';
+                    // const docsTitle = wp.data.select('core/editor').getEditedPostAttribute('title');
+
+                    const docsTitle = wp.data.select('core/editor').getEditedPostAttribute('title');
+
+                    // Check if the title has changed
+                    if (docsTitle !== previousDocsTitle) {
+                        let currentKeywords = jQuery('#betterdocs-ai-keyword').val();
+                        if (!currentKeywords) {
+                            currentKeywords = '{Documentation Keywords}';
+                        }
+                        const currentPrompt = `Generate documentation using HTML heading tags for '${docsTitle?docsTitle:'{Documentation title}'}'. Include relevant details on ${currentKeywords} in the documentation. Ensure all content is enclosed with <p> tags and apply a <span> tag with the class 'highlight' to headings and topic tags for emphasis.`;
+                        jQuery('#betterdocs-ai-content').val(currentPrompt);
+
+                        jQuery('#betterdocs-ai-title').val(docsTitle);
+
+                        previousDocsTitle = docsTitle;
                     }
-                    const currentPrompt = `Generate a documentation using HTML heading tags for '${docsTitle}'. Include relevant details on ${currentKeywords} in the documentation. Ensure all content is enclosed with <p> tags and apply a <span> tag with the class 'highlight' to headings and topic tags for emphasis.`;
-                    jQuery('#betterdocs-ai-title').val(docsTitle);
-                    jQuery('#betterdocs-ai-content').val(currentPrompt);
+
+                    
                 });
             });
+
 
             // This example assumes that this code is executed when your script is loaded.
             // You may want to place it within the appropriate context in your application.
@@ -386,9 +385,9 @@ class WriteWithAI extends Base {
                 }
 
                 const promtTitle = `<?php echo isset($_GET['post']) ? get_the_title($_GET['post']) : '{Documentation Title}'; ?>`;
-                const titlePlaceholder = "<?php echo esc_attr('Enter a descriptive title for your documentation.'); ?>";
+                const titlePlaceholder = "<?php echo esc_attr__('Enter a descriptive title for your documentation.', 'betterdocs'); ?>";
                 const keywords = "<?php echo esc_attr('{Documentation Keywords}'); ?>";
-                const keywordsPlaceholder = "<?php echo esc_attr('Add keywords to generate precise & relevant documentation (comma-separated).'); ?>";
+                const keywordsPlaceholder = "<?php echo esc_attr__('Add keywords to generate precise & relevant documentation (comma-separated).', 'betterdocs'); ?>";
                 const language = "<?php echo esc_attr('English'); ?>";
                 const titleLabel = "<?php echo esc_html__('Documentation Title:', 'betterdocs'); ?>";
                 const keywordLabel = "<?php echo esc_html__('Keywords:', 'betterdocs'); ?>";
@@ -401,9 +400,9 @@ class WriteWithAI extends Base {
                 const checkboxLabel = "<?php echo esc_html__('Overwrite your existing Doc:', 'betterdocs'); ?>";
                 const nonce = "<?php echo esc_attr(wp_create_nonce('generate_openai_content_nonce')); ?>";
 
-                <?php $is_valid = $this->isValidAPIKey($this->get_api_key());
+                <?php $is_valid = $this->get_api_key();
                         $disable_field = 'disabled-input-field';
-                        if ($is_valid['valid']) {
+                        if ($this->get_api_key()) {
                             $disable_field = '';
                         }
                         ?>
@@ -461,7 +460,7 @@ class WriteWithAI extends Base {
                                         <p><?php echo esc_html__('Generate documentation effortlessly with BetterDocs AI. Simply input your doc title, keywords, prompt and let the system automatically generate comprehensive documentation tailored to your needs.', 'betterdocs'); ?></p>
                                     </div>
 
-                                    <?php if (empty($is_valid['valid'])) : ?>
+                                    <?php if (empty($this->get_api_key())) : ?>
                                         <div id="betterdocs-ai-message">
                                             <div class="warning-message">
                                                     <span class="dashicons dashicons-warning"></span>
@@ -472,6 +471,10 @@ class WriteWithAI extends Base {
 
                                         </div>
                                     <?php endif; ?> 
+
+                                    <div class="form-group hidden">
+                                        <div id="betterdocs-ai-error-message"></div>
+                                    </div>
                                     
                                 </div>
                                 <form id="betterdocs-ai-form" class="<?php echo esc_attr($disable_field); ?>">
@@ -505,9 +508,6 @@ class WriteWithAI extends Base {
                                             </div>
                                         </div>
 
-                                        <div class="form-group hidden">
-                                            <div id="betterdocs-ai-error-message"></div>
-                                        </div>
                                         <input type="hidden" name="ai_nonce" value="${nonce}" />
                                     </div>
                                     <div class="generate-button-container">
@@ -570,7 +570,7 @@ class WriteWithAI extends Base {
                         }, 1);
                     });
                 }
-
+                
                 $(document).on('click', '#betterdocs-ai-autowrite-form-container-overlay', function() {
                     closeWriteWithAIForm();
                 });
@@ -686,8 +686,9 @@ class WriteWithAI extends Base {
                 border-radius: 5px;
                 font-family: 'IBM Plex Sans', sans-serif;
                 /* max-height: 600px; */
-                max-height: 100%;
+                max-height: 750px;
                 max-width: 100%;
+                overflow: auto;
             }
 
             .betterdocs-ai-autowrite-form-content {
@@ -961,6 +962,9 @@ class WriteWithAI extends Base {
                 font-size: 16px;
                 cursor: pointer;
                 border-radius: 4px;
+            }
+            .generate-btn[disabled] {
+                cursor: unset;
             }
 
             .bd-close-button {

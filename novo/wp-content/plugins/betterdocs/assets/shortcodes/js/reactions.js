@@ -1,1 +1,34 @@
-jQuery(document).ready((function(e){e(".betterdocs-feelings").on("click",(function(t){var n;t.preventDefault();let i=t.currentTarget.dataset.feelings,c=null!==(n=betterdocsReactionsConfig)&&void 0!==n?n:void 0;if(null!=c&&null!=c.FEEDBACK&&null!=c.FEEDBACK.DISPLAY&&1==c.FEEDBACK.DISPLAY){var l=c.FEEDBACK.URL;l.indexOf("?")>-1?l+="/"+c.post_id+"&feelings="+i:l+="/"+c.post_id+"?feelings="+i,jQuery.ajax({url:l,method:"POST",success:function(t){!0===t&&(e(".betterdocs-article-reactions-heading,.betterdocs-article-reaction-links").fadeOut(1e3),e(".betterdocs-article-reactions").html("<p>"+c.FEEDBACK.SUCCESS+"</p>").fadeIn(1e3))}})}}))}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**************************************************!*\
+  !*** ./react-src/public/shortcodes/reactions.js ***!
+  \**************************************************/
+jQuery(document).ready(function ($) {
+  $(".betterdocs-feelings").on('click', function (e) {
+    var _betterdocsReactionsC;
+    e.preventDefault();
+    let feelings = e.currentTarget.dataset.feelings;
+    let betterdocsConfig = (_betterdocsReactionsC = betterdocsReactionsConfig) !== null && _betterdocsReactionsC !== void 0 ? _betterdocsReactionsC : undefined;
+    if (betterdocsConfig != undefined && betterdocsConfig.FEEDBACK != undefined && betterdocsConfig.FEEDBACK.DISPLAY != undefined && betterdocsConfig.FEEDBACK.DISPLAY == true) {
+      var URL = betterdocsConfig.FEEDBACK.URL;
+      if (URL.indexOf('?') > -1) {
+        URL += '/' + betterdocsConfig.post_id + '&feelings=' + feelings;
+      } else {
+        URL += '/' + betterdocsConfig.post_id + '?feelings=' + feelings;
+      }
+      jQuery.ajax({
+        url: URL,
+        method: 'POST',
+        success: function (res) {
+          if (res === true) {
+            $('.betterdocs-article-reactions-heading,.betterdocs-article-reaction-links').fadeOut(1000);
+            $('.betterdocs-article-reactions').html('<p>' + betterdocsConfig.FEEDBACK.SUCCESS + '</p>').fadeIn(1000);
+          }
+        }
+      });
+    }
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=reactions.js.map

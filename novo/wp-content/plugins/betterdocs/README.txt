@@ -1,4 +1,4 @@
-=== BetterDocs – Best Documentation, FAQ & Knowledge Base Plugin with AI Support ===
+=== BetterDocs - Best Documentation & Knowledge Base Plugin ===
 Contributors: wpdevteam, re_enter_rupok, asif2bd, emsohel, priyomukul, cu121, fencermonir, sapanmozammel, seakashdiu
 Donate link: https://wpdeveloper.com
 Tags:  knowledge base, docs, documentation, documents, wiki, faq page, doc, knowledge, knowledgebase, doc page, best documentation plugin, support ticket, customer support, instant answer bot, bot, help articles, better docs, document, faq, instant answers, elementor, chat, live search, external knowledgebase, multiple knowledge bases, faqs, help, chatbot, TOC, table of content, elementor doc, template, doc theme
@@ -6,7 +6,7 @@ Tags:  knowledge base, docs, documentation, documents, wiki, faq page, doc, know
 Requires at least: 4.0
 Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 3.2.0
+Stable tag: 3.3.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -93,7 +93,7 @@ Show off your creativity and create an amazing single doc template with advanced
 
 ## 🤖 WRITE WITH AI AUTO WRITER ##
 
-Use the powerful Write With AI feature to quickly generate detailed documentation in a few clicks without any hassle.
+Use the powerful Write With AI feature to quickly generate detailed documentation & FAQs in a few clicks without any hassle.
 
 ## 🚀 DOCS ARCHIVE TEMPLATE WITH ELEMENTOR ##
 
@@ -195,6 +195,10 @@ Yes, it will work with any standard WordPress theme.
 
 
 == Changelog ==
+
+= 3.3.0 - 31/12/2023 =
+- Added: Write with AI Feature for FAQs
+- Few minor bug fixes and improvements
 
 = 3.2.0 - 14/12/2023 =
 - Added: Write with AI Feature for Documentation

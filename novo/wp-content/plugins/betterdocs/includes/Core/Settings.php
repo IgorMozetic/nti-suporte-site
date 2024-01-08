@@ -227,6 +227,7 @@ class Settings extends Base {
             'reporting_day'              => 'monday',
             'reporting_email'            => get_option( 'admin_email' ),
             'enable_write_with_ai'       => true,
+            'enable_faq_write_with_ai'   => true,
             'ai_autowrite_api_key'       => '',
             'ai_autowrite_max_token'     => 1500,
         ];
@@ -1660,6 +1661,7 @@ class Settings extends Base {
                     'type'     => 'section',
                     'label'    => __( 'Instant Answer', 'betterdocs' ),
                     'save' => false,
+                    'is_pro'   => !betterdocs()->is_pro_active(),
                     'priority' => 70,
                     'fields'   => [
                         'title-instant-answer' => [
@@ -2014,14 +2016,22 @@ class Settings extends Base {
                                     'enable_disable_text_active' => true,
                                     'default'     => true,
                                 ],
+                                'enable_faq_write_with_ai' => [
+                                    'name'        => 'enable_faq_write_with_ai',
+                                    'type'        => 'toggle',
+                                    'priority'    => 5,
+                                    'label'       => __('Write FAQ with AI', 'betterdocs'),
+                                    'label_subtitle' => __( 'Generate AI based FAQ in your Editor', 'betterdocs' ),
+                                    'enable_disable_text_active' => true,
+                                    'default'     => true,
+                                ],
                                 'ai_autowrite_api_key'      => [
                                     'name'     => 'ai_autowrite_api_key',
                                     'type'     => 'text',
                                     'label'    => __('API Key', 'betterdocs'),
                                     'label_subtitle'    => __('Check out this <a target="_blank" href="'.esc_url('https://betterdocs.co/docs/write-with-ai/').'">documentation</a> to find out to generate your OpenAI API Key', 'betterdocs'),
                                     'default'  => '',
-                                    'priority' => 5,
-                                    'rules'    => Rules::is('enable_write_with_ai', true)
+                                    'priority' =>10,
                                 ],
                                 'ai_autowrite_max_token' => [
                                     'name'     => 'ai_autowrite_max_token',
@@ -2029,8 +2039,7 @@ class Settings extends Base {
                                     'label'    => __('Set Max Tokens', 'betterdocs'),
                                     'label_subtitle'    => __('Documentation will be generated based on the Token Limits you have set. For more information on Token Limits, you can check out this <a target="_blank" href="'.esc_url('https://platform.openai.com/account/limits').'">link</a>.', 'betterdocs'),
                                     'default'  => 1500,
-                                    'priority' => 10,
-                                    'rules'    => Rules::is('enable_write_with_ai', true)
+                                    'priority' => 15,
                                 ],
                             ]
                         ]),
