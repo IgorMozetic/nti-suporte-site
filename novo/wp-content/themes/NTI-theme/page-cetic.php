@@ -16,7 +16,7 @@ get_header(); ?>
           <div class="fonte-cetic d-flex justify-content-center pb-4">
             <small class="text-center"><i class="w-100">Fonte: Guia de Comitê de TI do SISP: versão 2.0 / Ministério do Planejamento, Orçamento e Gestão. Secretaria de Logística e Tecnologia da Informação – Brasília: MP, 2013.</i></small>
           </div>
-          <ul>
+          <ul class="pb-3">
             <li><a rel="noreferrer noopener" href="https://www.ufabc.edu.br/administracao/comissoes/cetic/criacao" target="_blank">Criação</a></li>
             <li><a rel="noreferrer noopener" href="https://www.ufabc.edu.br/administracao/comissoes/cetic/composicao" target="_blank">Composição</a></li>
             <li><a rel="noreferrer noopener" href="https://www.ufabc.edu.br/administracao/comissoes/cetic/regimento-interno" target="_blank">Regimento Interno</a></li>

@@ -52,7 +52,7 @@ get_header(); ?>
               </li>
             </ul>
           </div>
-          <div class="box-6-tic py-2">
+          <div class="box-6-tic pt-2 pb-4">
             <ul>
               <li><strong><a rel="noreferrer noopener" href="https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1046.pdf#page=122" target="_blank">Norma de uso de e-mail institucional</a></strong>
                 <ul>

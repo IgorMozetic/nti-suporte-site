@@ -28,7 +28,7 @@ get_header(); ?>
             <h2 class="has-text-align-left wp-block-heading"><strong>Visão</strong></h2>
             <p>"Ser parceiro das diversas áreas da Universidade, prestando soluções de excelência no âmbito do ensino superior brasileiro através da prospecção, aquisição, desenvolvimento e sustentação das TIC, visando o aprimoramento permanente, alinhamento e integração às atividades-fim da UFABC aos processos de Gestão, Ensino, Pesquisa e Extensão."</p>
           </div>
-          <div class="valores py-2">
+          <div class="valores pt-2 pb-4">
             <h2 class="has-text-align-left wp-block-heading"><strong>Valores</strong></h2>
             <ul>
               <li><strong>Integridade: </strong>Manter conduta ética, preservando a confiança dos usuários nos serviços prestados e na segurança de suas informações;</li>
