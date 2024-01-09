@@ -26,7 +26,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/moodle.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/moodle.svg" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
@@ -56,7 +56,7 @@ get_header(); ?>
             <div class="col-md-4 py-2">
               <div class="card h-100">
                 <div class="w-100 d-flex justify-content-center align-items-center div-image-sistemas">
-                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/atributos-docente.png" alt="Card image cap">
+                  <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/images/sistemas-institucionais-fundo/atributos-docente.svg" alt="Card image cap">
                 </div>
                 <hr class="m-0">
                 <div class="card-body">
