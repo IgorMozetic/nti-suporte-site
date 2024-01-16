@@ -376,7 +376,7 @@ a:hover {
 }
 
 #sistemas-institucionais .card-img-top {
-  width: 150px;
+  width: 200px;
   height: 150px;
   display: flex;
   justify-content: center;
@@ -396,11 +396,6 @@ a:hover {
   position: absolute;
   bottom: 5px;
   right: 5px;
-}
-
-.home .sistemasinstitucionais div:nth-child(3) img,
-.home .sistemasinstitucionais div:nth-child(4) img {
-  width: 90px;
 }
 
 @media (max-width: 768px) {
