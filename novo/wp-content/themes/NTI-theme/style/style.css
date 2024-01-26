@@ -389,8 +389,8 @@ a:hover {
   gap: 15px;
 }
 
-.home .card > div.mais,
-.home a.text-right.mais {
+.card > div.mais,
+a.text-right.mais {
   padding-right: 1rem;
   padding-top: 1rem;
   position: absolute;

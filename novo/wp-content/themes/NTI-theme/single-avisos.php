@@ -3,7 +3,7 @@
   <div id="primary" class="content-area">
     <main id="main" class="container single-avisos">
       <div class="breadcrumb bg-light pt-4"><?php get_breadcrumb(); ?></div>
-      <div class="row">
+      <div class="row pb-4  ">
         <div class="col-sm-12">
           <?php
           while (have_posts()) : the_post(); ?>
