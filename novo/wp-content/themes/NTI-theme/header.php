@@ -103,8 +103,8 @@
                     <div class="row my-sm-0 my-md-2 my-lg-2 ">
                       <div class="col-12">
                         <div id="portal-searchbox" class="">
-                          <form role="search" method="post" id="searchform" class="searchform form-inline input-group mb-3 my-md-0  my-lg-0" action="<?php echo site_url() . '/search-page' ?>">
-                            <input placeholder="Buscar no portal NTI" class="form-control search_field" type="text" value="<?php echo the_search_query(); ?>" name="search-nti" id="search-nti" />
+                          <form role="search" method="get" id="searchform" class="searchform form-inline input-group mb-3 my-md-0  my-lg-0" action="<?php echo site_url() . '/search-page' ?>">
+                            <input placeholder="Buscar no portal NTI" class="form-control search_field" type="text" value="<?php echo the_search_query(); ?>" name="search" id="search" />
                             <button class="btn btn-warning my-sm-0 search_button" type="submit" id="searchsubmit" value="Post data"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                               </svg>
@@ -151,7 +151,7 @@
                 <div class="menu-menu-nti-topo-container w-100">
                   <ul id="menu-menu-nti-topo" class="menu">
                     <li id="menu-item-2997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2997"><a href="http://servicos.ufabc.edu.br/">Central de Serviços</a></li>
-                    <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="<?php echo site_url() . '/?post_type=docs' ?>">Manuais e Tutoriais</a></li>
+                    <li id="menu-item-4329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4329"><a href="<?php echo site_url() . '/docs' ?>">Manuais e Tutoriais</a></li>
                     <li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3002"><a href="<?php echo site_url() . '/sistemas-institucionais' ?>">Sistemas Institucionais</a></li>
                     <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4418"><a href="<?php echo site_url() . '/governanca' ?>">Governança</a>
                       <ul class="sub-menu">

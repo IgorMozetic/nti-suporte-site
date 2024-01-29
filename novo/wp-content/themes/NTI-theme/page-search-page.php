@@ -1,5 +1,5 @@
 <?php
-$search = $_POST['search-nti'];
+$search = $_GET['search'];
 get_header();
 ?>
 <div id="content" class="wrap">
@@ -13,6 +13,7 @@ get_header();
         $args = array(
           's' => $search,
           'post_type' => array('docs', 'avisos'),
+          'post_status' => 'publish',
           'orderby' => 'title',
           'order' => 'ASC'
         );
